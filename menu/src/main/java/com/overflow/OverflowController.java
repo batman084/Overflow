@@ -21,7 +21,7 @@ public class OverflowController {
     public String myConnect(Model model) {
         MyConnect test = new MyConnect;
         model.addAttribute("assignment1", test.return1());
-        model.addAttribute("assignment2", test.return2());
+      //  model.addAttribute("assignment2", test.return2());
 
         return "myconnect";
     }

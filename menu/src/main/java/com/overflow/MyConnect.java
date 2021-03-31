@@ -51,9 +51,9 @@ public class MyConnect {
 
 
             assignment1 = task1.get("title");
-            assignment2 = task2.get("title");
+          //  assignment2 = task2.get("title");
             System.out.println(assignment1);
-            System.out.println(assignment2);
+         //  System.out.println(assignment2);
 
 
 
@@ -65,12 +65,12 @@ public class MyConnect {
     }
 
     public Object return1() {
-        return current_temp;
+        return assignment1;
     }
 
-    public Object return2() {
-        return feels_temp;
-    }
+   // public Object return2() {
+    //    return assignment2;
+   // }
 
 
 }
