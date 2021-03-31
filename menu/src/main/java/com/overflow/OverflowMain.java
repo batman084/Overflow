@@ -10,14 +10,13 @@ import java.security.GeneralSecurityException;
 import java.sql.Driver;
 
 @SpringBootApplication
-public class OverflowMain {
+public class NautilusApplication {
     @RequestMapping(value = "/index")
     public String index() {
         return "index";
     }
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
-        //CalendarRequest.main();
-        SpringApplication.run(OverflowMain.class, args);
+        SpringApplication.run(OverflowController.class, args);
     }
 }
