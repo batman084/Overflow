@@ -3,13 +3,11 @@ package com.overflow;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +25,7 @@ public class MyConnect {
         return map;
     }
 
-    public getCalendarEvents {
+    public void getCalendarEvents() {
         String API_KEY = "6936~IAjWgaDXQMSHj1uTb8MQiFK7TCiDOvp6FPvqjw6TLwsBh9AXiqzncVoVQq46v0py";
         url_string = "https://k12.instructure.com/api/v1/users/self/upcoming_events?access_token=" + API_KEY;
         System.out.println(url_string);
