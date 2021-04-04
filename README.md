@@ -10,26 +10,6 @@ The goal of this application is to support students and keep them on track and o
   <dt>ToDo</dt>  
   <dd>Our application will also support a in-app ToDo list that the user can make to supplement the MyConnect linked account so that the user can add specific items for their agenda</dd> 
 </dl>
-<h1>Week 1: Set up </h1>
-<h2>SMART Goals </h2>
-<d1>
-  <dt>S: Specific</dt>
-  <dd>Create a seamless design that brings in MyConnect and also a ToDo feature that work together in harmony to create a application that will aide all students</dd>
-  <dt>M: Measurable</dt>
-  <dd>The progress of the project will be tracked through the progress board on Github. Each week, if each individual is able to complete individual assignments, it is a reflection that we are on track.</dd>
-  <dt>A: Achievable</dt>
-  <dd>This is a realistic goal as it is not too ambitious. We know that in the time frame, we won’t be able to replicate My Connect which is why we will create something that reflects just the TO-DO list feature from My Connect.</dd>
-  <dt>R: Relevant</dt>
-  <dd>This is a relevant project as the TO-DO feature is something that we have seen in our lives. It also complements the technical topics discussed in class as we’ll host the website on AWS and code in HTML/CSS.</dd>
-  <dt>T: Time-bound</dt>
-  <dd>We will project this to take 6 weeks (half a trimester) and will attempt to complete all our individual assignments by then. We will start from next week.</dd>
-</d1>
-
-<h2>SMART Goal Reflection </h2>
-The most important goal we have is the stay on track and that is why we have created a <a href="https://github.com/batman084/Overflow/projects/1">Project Board</a> that we use to keep ourselves on track. This week, all members of the team worked on their invididual tasks, which were mainly focused on researching and learning about our individual assignments.
-
-<h2>MiniLab Repo </h2>
-All of our minilabs are accessible via this repo: <a href="https://github.com/batman084/Overflow-Minilabs">Overflow Minilabs</a>
 
 <h1>Week 0: Planning </h1>
 
@@ -63,4 +43,26 @@ All of our minilabs are accessible via this repo: <a href="https://github.com/ba
 
 <h2>Goals</h2>
 <p>Create a seamless design that brings in MyConnect and also a ToDo feature that work together in harmony to create a application that will aide all students</p>
+
+<h1>Week 1: Set up </h1>
+<h2>SMART Goals </h2>
+<d1>
+  <dt>S: Specific</dt>
+  <dd>Create a seamless design that brings in MyConnect and also a ToDo feature that work together in harmony to create a application that will aide all students</dd>
+  <dt>M: Measurable</dt>
+  <dd>The progress of the project will be tracked through the progress board on Github. Each week, if each individual is able to complete individual assignments, it is a reflection that we are on track.</dd>
+  <dt>A: Achievable</dt>
+  <dd>This is a realistic goal as it is not too ambitious. We know that in the time frame, we won’t be able to replicate My Connect which is why we will create something that reflects just the TO-DO list feature from My Connect.</dd>
+  <dt>R: Relevant</dt>
+  <dd>This is a relevant project as the TO-DO feature is something that we have seen in our lives. It also complements the technical topics discussed in class as we’ll host the website on AWS and code in HTML/CSS.</dd>
+  <dt>T: Time-bound</dt>
+  <dd>We will project this to take 6 weeks (half a trimester) and will attempt to complete all our individual assignments by then. We will start from next week.</dd>
+</d1>
+
+<h2>SMART Goal Reflection </h2>
+The most important goal we have is the stay on track and that is why we have created a <a href="https://github.com/batman084/Overflow/projects/1">Project Board</a> that we use to keep ourselves on track. This week, all members of the team worked on their invididual tasks, which were mainly focused on researching and learning about our individual assignments.
+
+<h2>MiniLab Repo </h2>
+All of our minilabs are accessible via this repo: <a href="https://github.com/batman084/Overflow-Minilabs">Overflow Minilabs</a>
+
 
