@@ -1,5 +1,15 @@
 # Overflow
+<h2>Project Plan</h2>
+<p> We plan to create a version of MyConnect but scaled down to a google calendar format which will also take into account a todo list that the user can create, add to, and remove items from </p>
 
+The goal of this application is to support students and keep them on track and organized to ensure that the students are on track for assignments and due dates  
+<h2> Project Features </h2> 
+<dl>
+  <dt>MyConnect API Link</dt>
+  <dd>Our application will link with the users existing MyConnect profile and will display assignments on the home screen of the application so that users can easily view all    assignments that have to be done</dd>
+  <dt>ToDo</dt>  
+  <dd>Our application will also support a in-app ToDo list that the user can make to supplement the MyConnect linked account so that the user can add specific items for their agenda</dd> 
+</dl>
 <h1>Week 1: Set up </h1>
 <h2>SMART Goals </h2>
 <d1>
@@ -22,17 +32,7 @@ The most important goal we have is the stay on track and that is why we have cre
 All of our minilabs are accessible via this repo: <a href="https://github.com/batman084/Overflow-Minilabs">Overflow Minilabs</a>
 
 <h1>Week 0: Planning </h1>
-<h2>Project Plan</h2>
-<p> We plan to create a version of MyConnect but scaled down to a google calendar format which will also take into account a todo list that the user can create, add to, and remove items from </p>
 
-The goal of this application is to support students and keep them on track and organized to ensure that the students are on track for assignments and due dates  
-<h2> Project Features </h2> 
-<dl>
-  <dt>MyConnect API Link</dt>
-  <dd>Our application will link with the users existing MyConnect profile and will display assignments on the home screen of the application so that users can easily view all    assignments that have to be done</dd>
-  <dt>ToDo</dt>  
-  <dd>Our application will also support a in-app ToDo list that the user can make to supplement the MyConnect linked account so that the user can add specific items for their agenda</dd> 
-</dl>
 
 <h2>Individual Assignments</h2>
 <table>
