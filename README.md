@@ -9,6 +9,9 @@ The goal of this application is to support students and keep them on track and o
   <dd>Our application will link with the users existing MyConnect profile and will display assignments on the home screen of the application so that users can easily view all    assignments that have to be done</dd>
   <dt>ToDo</dt>  
   <dd>Our application will also support a in-app ToDo list that the user can make to supplement the MyConnect linked account so that the user can add specific items for their agenda</dd> 
+
+Project Plan Flowchart: ![](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/pictures/project%20plan%20flowchart.png)
+
 </dl>
 
 <h1>Week 2: Setting up a structure </h1>
