@@ -11,6 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/MyConnect" />
+            <option value="$PROJECT_DIR$/ToDo" />
+            <option value="$PROJECT_DIR$/menu" />
           </set>
         </option>
       </GradleProjectSettings>
