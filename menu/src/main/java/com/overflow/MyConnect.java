@@ -53,10 +53,6 @@ public class MyConnect {
             System.out.println(assignment1);
          //  System.out.println(assignment2);
 
-
-
-
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
