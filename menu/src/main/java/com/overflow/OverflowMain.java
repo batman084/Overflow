@@ -23,13 +23,13 @@ import java.sql.Driver;
 
 @SpringBootApplication
 public class OverflowMain extends SpringBootServletInitializer {
-    @RequestMapping(value = "/index")
-    public String index() {
-        return "index";
-    }
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
         SpringApplication.run(OverflowController.class, args);
+    }
+    @RequestMapping(value = "/index")
+    public String index() {
+        return "index";
     }
 
     @Bean
