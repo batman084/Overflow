@@ -2,40 +2,22 @@ package com.overflow;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
-import java.io.IOException;
-import java.security.GeneralSecurityException;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.io.IOException;
-import java.security.GeneralSecurityException;
-import java.sql.Driver;
-
-@SpringBootApplication
-public class OverflowMain extends SpringBootServletInitializer {
-    @RequestMapping(value = "/index")
-    public String index() {
-        return "index";
+@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class})
+public class OverflowMain {
+    public static void main(String[] args) {
+        SpringApplication.run(OverflowMain.class, args);
     }
 
-    public static void main(String[] args) throws IOException, GeneralSecurityException {
-        SpringApplication.run(OverflowController.class, args);
-    }
-
-    @Bean
-    public ServletWebServerFactory servletWebServerFactory() {
-        return new TomcatServletWebServerFactory();
+    @GetMapping("/myconnect")
+    public String ApiCall(Model model) {
+        ApiCall test = new ApiCall();
+        model.addAttribute("assignment1", test.return1());
+        return "myconnect";
     }
 
 }
-
