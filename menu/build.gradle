@@ -28,7 +28,8 @@ dependencies {
     implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
     implementation 'com.google.apis:google-api-services-calendar:v3-rev305-1.23.0'
     implementation 'com.google.code.gson:gson:2.8.0'
-/*    implementation 'org.springframework.boot:spring-boot-starter-web'*/
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat'
 /*    compileOnly 'org.projectlombok:lombok'*/
 /*    annotationProcessor 'org.projectlombok:lombok'*/
 /*    testImplementation 'org.springframework.boot:spring-boot-starter-test'*/
