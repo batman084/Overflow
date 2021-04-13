@@ -3,7 +3,7 @@
 <p> We plan to create a version of MyConnect but scaled down to a google calendar format which will also take into account a todo list that the user can create, add to, and remove items from </p>
 
 The goal of this application is to support students and keep them on track and organized to ensure that the students are on track for assignments and due dates  
-<h2> Project Features </h2> 
+<h2> Project Features </h2>
 <dl>
   <dt>MyConnect API Link</dt>
   <dd>Our application will link with the users existing MyConnect profile and will display assignments on the home screen of the application so that users can easily view all    assignments that have to be done</dd>

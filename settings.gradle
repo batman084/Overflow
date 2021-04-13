@@ -1,7 +1,0 @@
-rootProject.name = 'Overflow'
-include 'menu'
-include 'MyConnect'
-findProject(':MyConnect')?.name = 'myconnect'
-include 'ToDo'
-findProject(':ToDo')?.name = 'todo'
-
