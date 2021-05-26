@@ -22,6 +22,8 @@ public class MyConnect {
     private Object currentGrade;
     private Object assignment1;
     private Object assignment2;
+    private Object assignment1link;
+    private Object assignment2link;
     private Object assignment3;
 
 
@@ -50,12 +52,15 @@ public class MyConnect {
 
             JSONArray jsonArray = new JSONArray(result.toString());
             Map<String, Object> respMap1 = jsonToMap(jsonArray.getJSONObject(0).toString());
-/*            Map<String, Object> respMap2 = jsonToMap(jsonArray.getJSONObject(1).toString());
-            Map<String, Object> respMap3 = jsonToMap(jsonArray.getJSONObject(2).toString());*/
+            Map<String, Object> respMap2 = jsonToMap(jsonArray.getJSONObject(1).toString());
+        //    Map<String, Object> respMap3 = jsonToMap(jsonArray.getJSONObject(2).toString());
 
             assignment1 = respMap1.get("title");
-/*            assignment2 = respMap2.get("title");
-            assignment3 = respMap3.get("title");*/
+            assignment2 = respMap2.get("title");
+
+            assignment1link = respMap1.get("html_url");
+            assignment2link = respMap2.get("html_url");
+        //    assignment3 = respMap3.get("title");
 
         } catch (IOException | JSONException e) {
             System.out.println(e.getMessage());
@@ -66,13 +71,21 @@ public class MyConnect {
         return assignment1;
     }
 
-/*    public Object return2() {
+    public Object return2() {
         return assignment2;
     }
 
-    public Object return3() {
-        return assignment3;
-    }*/
+    public Object return1link() {
+        return assignment1link;
+    }
+
+    public Object return2link() {
+        return assignment2link;
+    }
+
+  //  public Object return3() {
+ //       return assignment3;
+  //  }
 
 }
 
