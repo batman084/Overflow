@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gautam - Recursion</title>
+    <a href="/Minilabs">Home</a>
+</head>
+<body>
+<h1>Gautam's Recursion Minilab</h1>
+<h2>Factorial Recursion</h2>
+<form id="GautamRecursion" action="/GautamRecursion" method="GET">
+    <label for="sNum">Starting number: </label>
+    <input name="sNum" id="sNum" type="number" />
+    <button>Display Results</button>
+    <p th:text="'Factorial of ' + ${num1} + ' is ' + ${fact1} + '.'"></p>
+</form>
+</body>
+</html>

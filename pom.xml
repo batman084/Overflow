@@ -3,9 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.overflow</groupId>
   <artifactId>spring-boot-thymeleaf</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>main</name>
+    <modules>
+        <module>minilabs</module>
+      <module>menu</module>
+      <module>myconnect</module>
+    </modules>
+    <name>main</name>
   <url>http://maven.apache.org</url>
 
   <properties>

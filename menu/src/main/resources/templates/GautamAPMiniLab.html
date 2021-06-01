@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gautam - AP MiniLab</title>
+    <a href="/Minilabs">Home</a>
+</head>
+<body>
+<form id="GautamAPMiniLab" action="/GautamAPMiniLab" method="GET">
+    <br><br>
+    <label for="minSteps">Minimum steps required for an active day: </label>
+    <input name="minSteps" id="minSteps" type="number"/>
+    <br>
+    <label for="steps">How many steps do you want to add? </label>
+    <input name="steps" id="steps" type="number"/>
+    <br>
+    <button>Display Results:</button>
+    <p th:text="'Active Days: ' + ${activeSteps}">Role:</p>
+    <p th:number="'Average Steps: ' + ${averageSteps}"></p>
+    <p th:text="'Total Steps: ' + ${totalSteps}"></p>
+</form>
+</body>
+</html>

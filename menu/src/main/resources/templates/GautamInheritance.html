@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gautam - Inheritance</title>
+    <a href="/Minilabs">Home</a>
+
+</head>
+<body>
+<form id="GautamInheritance" action="/GautamInheritance" method="GET">
+
+    <h1>Gautam - Inheritance</h1>
+    <br><br>
+    <label for="role">Set the role here: </label>
+    <input name="role" id="role" type="text"/>
+    <br>
+    <label for="deadline">Set the number of pages to do here:</label>
+    <input name="deadline" id="deadline" type="number"/>
+    <button>Display Results:</button>
+    <p th:text="'Role: ' + ${roleN}">Role:</p>
+    <p th:text="'Days till Deadline: ' + ${deadlineN}"></p>
+    <p th:text="'Pages ToDo: ' + ${deadlineStatus}"></p>
+</form>
+</body>
+</html>
