@@ -1,4 +1,18 @@
 # Overflow
+
+<h2>Weekly Updates </h2>
+<h3>Gautam & Dhruv</h3>
+This week, Dhruv and I (Gautam) worked on the MyConnect aspect of our project. Dhruv added the extra functionality to the MyConnect interface that we wanted whereas I restructured the project into the different parts of the project we need for NATM. I also incorporated our minilabs into our Overflow repo.  
+<br><br>
+
+Here are the links to our commits: [Dhruv's Code](https://github.com/batman084/Overflow/commit/7388f3de684b0c8863a3dfae117afe8bc1d52433) & [Gautam's Code](https://github.com/batman084/Overflow/commit/5b0d6b19b5f3b984e7ca2259804c71e6c84989ef)
+
+Me and Dhruv are very much on track for our plan according to our umbrella ticket. 
+
+Self Grade:  
+Dhruv - 5/5  
+Gautam - 5/5  
+
 <h2>Project Plan</h2>
 <p> We plan to create a version of MyConnect but scaled down to a google calendar format which will also take into account a todo list that the user can create, add to, and remove items from </p>
 
