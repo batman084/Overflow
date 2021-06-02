@@ -1,0 +1,31 @@
+package com.jacob;
+import java.util.*;
+public class Main {
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("To create a Reminder, press 1");
+        String answer = scanner.nextLine();
+
+        while (answer.equals("1") == false){
+            System.out.println("To create a Reminder, press 1");
+            answer = scanner.nextLine();
+	    }
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("Please give the Event a Title");
+        String answerTitle = scanner1.nextLine();
+
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Please give the event a description");
+        String answerDescription = scanner2.nextLine();
+
+        Scanner scanner3 = new Scanner(System.in);
+        System.out.println("Please give the event a due date");
+        String answerTime = scanner3.nextLine();
+
+        ToDo event = new ToDo(answerTitle, answerDescription, answerTime);
+
+
+    }
+}
