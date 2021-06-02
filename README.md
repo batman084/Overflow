@@ -2,6 +2,13 @@
 [Project Board](https://github.com/batman084/Overflow/projects/1)
 
 <h2>Weekly Updates </h2>
+<h3>Jacob & Arnav</h3>
+This week, Arnav and I (Jacob) worked on the ToDo feature of the project.  
+<br><br>
+Here are the links to our commits: [Jacob's Code]() & [Arnav's Code]()
+
+
+<h2>Weekly Updates </h2>
 <h3>Gautam & Dhruv</h3>
 This week, Dhruv and I (Gautam) worked on the MyConnect aspect of our project. Dhruv added the extra functionality to the MyConnect interface that we wanted whereas I restructured the project into the different parts of the project we need for NATM. I also incorporated our minilabs into our Overflow repo.  
 <br><br>
