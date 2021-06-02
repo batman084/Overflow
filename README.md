@@ -7,6 +7,9 @@ This week, Arnav and I (Jacob) worked on the ToDo feature of the project.
 <br><br>
 Here are the links to our commits: Jacob's and Arnav's Code [Artifact 1](https://github.com/batman084/Overflow/blob/main/Reminder) & [Artifact 2] (https://github.com/batman084/Overflow/blob/main/ToDo)
 
+Self Grade:  
+Jacob - 5/5  
+Arnav - 5/5  
 
 <h2>Weekly Updates </h2>
 <h3>Gautam & Dhruv</h3>
