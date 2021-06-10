@@ -4,7 +4,7 @@
 <h2>Weekly Updates - Week 3</h>
 <h3>Gautam and Dhruv</h3>
 This week Me (Gautam) and Dhruv worked on finally finishing up MyConnect on our project. We plan to work on ToDo and deployment this weekend.
-
+Arnav worked on some of the html for the reminder area of this project but that will be furtherly looked over.
 Here is what we plan to do this week:
 
 - Started working on html and css for MyConnect and entire project
