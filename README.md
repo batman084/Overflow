@@ -1,10 +1,12 @@
 # Overflow
 [Project Board](https://github.com/batman084/Overflow/projects/1)
-
+<h2>Weekly Updates - Week 3</h>
+<h3>Arnav and Jacob</h3>
+This week Arnav worked on some of the reminder section of the project and Jacob worked on the SQL of the project which will make the database.
 <h2>Weekly Updates - Week 3</h>
 <h3>Gautam and Dhruv</h3>
 This week Me (Gautam) and Dhruv worked on finally finishing up MyConnect on our project. We plan to work on ToDo and deployment this weekend.
-Arnav worked on some of the html for the reminder area of this project but that will be furtherly looked over.
+
 Here is what we plan to do this week:
 
 - Started working on html and css for MyConnect and entire project
