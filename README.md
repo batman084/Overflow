@@ -3,7 +3,7 @@
 
 <h2>Weekly Updates - Week 3</h>
 <h3>Arnav and Jacob</h3>
-This week Arnav and Jacob worked on the to do section of myconnect as well as SQL for the database
+This week Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
 
 <h2>Weekly Updates - Week 3</h>
 <h3>Gautam and Dhruv</h3>
