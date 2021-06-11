@@ -16,7 +16,8 @@ Here is what we plan to do this week:
 - Finish html and css for MyConnect
 - Deployment
 
-The code is locally stored on Gautam's laptop and hasn't been pushed yet. As soon as he gets home, he will push the code and add the commit link.
+[Commit Link](https://github.com/batman084/Overflow/commit/cebfe1484eba0d5194957be7b1fc9d89bffe99cd)  
+*Note: The commit is just Gautam's because Dhruv and Gautam work on it together on a Discord call*
 
 <h2>Weekly Updates - Week 2</h2>
 <h3>Jacob & Arnav</h3>
