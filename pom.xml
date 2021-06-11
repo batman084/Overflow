@@ -9,6 +9,7 @@
         <module>minilabs</module>
       <module>menu</module>
       <module>myconnect</module>
+        <module>todo</module>
     </modules>
     <name>main</name>
   <url>http://maven.apache.org</url>
