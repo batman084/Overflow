@@ -1,7 +1,24 @@
 # Overflow
 [Project Board](https://github.com/batman084/Overflow/projects/1)
 
-<h2>Weekly Updates </h2>
+<h2>Weekly Updates - Week 3</h>
+<h3>Arnav and Jacob</h3>
+This week Arnav and Jacob worked on the to do section of myconnect as well as SQL for the database
+
+<h2>Weekly Updates - Week 3</h>
+<h3>Gautam and Dhruv</h3>
+This week Me (Gautam) and Dhruv worked on finally finishing up MyConnect on our project. We plan to work on ToDo and deployment this weekend.  
+
+Here is what we plan to do this week:  
+
+- Started working on html and css for MyConnect and entire project
+- Started working on rest api
+- Finish html and css for MyConnect
+- Deployment
+
+The code is locally stored on Gautam's laptop and hasn't been pushed yet. As soon as he gets home, he will push the code and add the commit link.
+
+<h2>Weekly Updates - Week 2</h2>
 <h3>Jacob & Arnav</h3>
 This week, Arnav and I (Jacob) worked on the ToDo feature of the project.  
 <br><br>
