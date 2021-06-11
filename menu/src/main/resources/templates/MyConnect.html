@@ -4,19 +4,27 @@
 <head>
     <title>Hello Spring Boot!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <a href="/">Home</a>
+    <a href="MyConnectLogin">Home</a>
 </head>
 <body>
+
 <h2>First assignment</h2>
 <p th:text="'Title: ' + ${assignment1}"></p>
-<a th:href="${assignmentLink1}">Submit?</a>
+<p th:text="'Points Possible: ' + ${assignment1desc}"></p>
+<p th:text="'Due at: ' + ${assignment1due}"></p>
+<a th:href="${assignmentLink1}">Submit Here:</a>
 
 <h2>Second assignment</h2>
 <p th:text="'Title: ' + ${assignment2}"></p>
-<a th:href=" ${assignmentLink2}">Submit?</a>
+<p th:text="'Points Possible: ' + ${assignment2desc}"></p>
+<p th:text="'Due at: ' + ${assignment2due}"></p>
+<a th:href=" ${assignmentLink2}">Submit Here:</a>
 
 <h2>Third assignment</h2>
 <p th:text="'Title: ' + ${assignment3}"></p>
+<p th:text="'Points Possible: ' + ${assignment3desc}"></p>
+<p th:text="'Due at: ' + ${assignment3due}"></p>
+<a th:href=" ${assignmentLink3}">Submit Here:</a>
 
 </body>
 </html>

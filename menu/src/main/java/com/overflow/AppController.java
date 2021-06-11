@@ -10,6 +10,7 @@ import com.minilabs.gautam.SortsInt.Bubble;
 import com.minilabs.gautam.SortsInt.Insertion;
 import com.minilabs.gautam.SortsInt.Selection;
 import com.minilabs.gautam.SortsPOJO.NameG;
+import com.myconnect.Login;
 import com.myconnect.MyConnect;
 import com.minilabs.Minilabs;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,25 +19,47 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 import java.util.Arrays;
 
 @Controller
 @ComponentScan()
 public class AppController {
+
+    Login test1;
+    final String defaultID = "6936~rffaXRfNKIkE5QgIKa6lsNuIaOh7vxtJSvIRerholiBgbswdHTDpXfX1pNVB5Mf1";
+
     @GetMapping("/")
     String index() {
         return "index";
     }
 
+    @GetMapping("/MyConnectLogin")
+    String MyConnectLogin(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
+        test1 = new Login(id1);
+        if (test1.id2.equals(defaultID)) {
+            model.addAttribute("idTest", "The default ID");
+        } else {
+            model.addAttribute("idTest", id1);
+        }
+        return "MyConnectLogin";
+    }
+
     @GetMapping("/MyConnect")
     String MyConnect(Model model) {
-        MyConnect test = new MyConnect();
+        MyConnect test = new MyConnect(test1.id2);
         model.addAttribute("assignment1", test.return1());
         model.addAttribute("assignment2", test.return2());
+        model.addAttribute("assignment3", test.return3());
 
         model.addAttribute("assignmentLink1", test.return1link());
         model.addAttribute("assignmentLink2", test.return2link());
-     //   model.addAttribute("assignment3", test.return3());
+        model.addAttribute("assignmentLink3", test.return3link());
+
+        model.addAttribute("assignment1desc", test.return1desc());
+        model.addAttribute("assignment2desc", test.return2desc());
+        model.addAttribute("assignment2desc", test.return3desc());
+
         return "MyConnect";
     }
 

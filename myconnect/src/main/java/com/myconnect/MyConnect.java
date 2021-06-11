@@ -12,19 +12,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class MyConnect {
     private String url_string;
     private Object currentGrade;
     private Object assignment1;
     private Object assignment2;
+    private Object assignment3;
     private Object assignment1link;
     private Object assignment2link;
-    private Object assignment3;
+    private Object assignment3link;
+    private Object assignment1desc;
+    private Object assignment2desc;
+    private Object assignment3desc;
 
 
 
@@ -35,9 +39,14 @@ public class MyConnect {
         return map;
     }
 
-    public MyConnect() {
-        String API_KEY = "6936~wL5KoYWDF0iXRzn8OtDXEj98IK8mdh1s6Ha3cvXNk9ap28xM3k7QCXgkjyr34t2P";
-        url_string = "https://k12.instructure.com/api/v1/users/self/upcoming_events?access_token=" + API_KEY;
+    public MyConnect(String a) {
+        String API_KEY = a;
+        url_string = "https://poway.instructure.com/api/v1/users/self/upcoming_events?access_token=" + API_KEY;
+
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ssZ");
+        Date result1;
+        Date result2;
+        Date result3;
 
         try {
             StringBuilder result = new StringBuilder();
@@ -53,14 +62,20 @@ public class MyConnect {
             JSONArray jsonArray = new JSONArray(result.toString());
             Map<String, Object> respMap1 = jsonToMap(jsonArray.getJSONObject(0).toString());
             Map<String, Object> respMap2 = jsonToMap(jsonArray.getJSONObject(1).toString());
-        //    Map<String, Object> respMap3 = jsonToMap(jsonArray.getJSONObject(2).toString());
+            Map<String, Object> respMap3 = jsonToMap(jsonArray.getJSONObject(2).toString());
 
             assignment1 = respMap1.get("title");
             assignment2 = respMap2.get("title");
+            assignment3 = respMap3.get("title");
 
             assignment1link = respMap1.get("html_url");
             assignment2link = respMap2.get("html_url");
-        //    assignment3 = respMap3.get("title");
+            assignment3link = respMap3.get("html_url");
+
+            assignment1desc = respMap1.get("points_possible");
+            assignment2desc = respMap2.get("points_possible");
+            assignment3desc = respMap3.get("points_possible");
+
 
         } catch (IOException | JSONException e) {
             System.out.println(e.getMessage());
@@ -75,6 +90,10 @@ public class MyConnect {
         return assignment2;
     }
 
+    public Object return3() {
+        return assignment3;
+    }
+
     public Object return1link() {
         return assignment1link;
     }
@@ -83,9 +102,16 @@ public class MyConnect {
         return assignment2link;
     }
 
-  //  public Object return3() {
- //       return assignment3;
-  //  }
+    public Object return3link() {
+        return assignment3link;
+    }
+
+    public Object return1desc() { return assignment1desc; }
+
+    public Object return2desc() { return assignment2desc; }
+
+    public Object return3desc() { return assignment3desc; }
+
 
 }
 
