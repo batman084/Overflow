@@ -22,6 +22,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="myconnect" />
     <orderEntry type="module" module-name="minilabs" />
+    <orderEntry type="module" module-name="todo" />
+    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.34.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.4.1" level="project" />
@@ -66,6 +68,5 @@
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
-    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.34.0" level="project" />
   </component>
 </module>

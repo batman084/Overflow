@@ -14,7 +14,8 @@ public class ServiceTest {
 
     private static void runTests() {
         // create in working directory folder with a specific name
-        DbConnection db = DbConnection.createConnection("", "serviceTest.db");
+        // DbConnection db = DbConnection.createConnection("", "serviceTest.db");
+        DbConnection db = DbConnection.createConnection();
 
         TodoService service = new TodoService(db);
 
