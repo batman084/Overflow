@@ -1,17 +1,17 @@
-package com.overflow.todo.service;
+package com.overflow.todo.data;
 
 import java.util.Date;
 
 public class TodoItem {
-    private final String id;
-    private final String userId;
+    private final int id;
+    private final int userId;
     private final String title;
     private final String description;
     private final Date dateTime;
 
     public TodoItem(
-            String id,
-            String userId,
+            int id,
+            int userId,
             String title,
             String description,
             Date dateTime) {
