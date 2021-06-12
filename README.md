@@ -6,6 +6,7 @@
 This week Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
 Commit work for Jacob: [Commit work](https://github.com/batman084/Overflow/blob/main/Reminder)
 [Commit work](https://github.com/batman084/Overflow/tree/main-todo-jr/todo)
+[Commit Work](https://github.com/batman084/Overflow/blob/main-todo-jr/todo/src/main/java/com/overflow/todo/database/DbConnection.java)
 
 Commit work for Arnav S: [Commit work](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/ToDOmyconnect.html)
 [Commit work](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/Reminder.html)
