@@ -1,5 +1,6 @@
 package com.overflow;
 
+import com.minilabs.dhruvS.LinkList.linklist;
 import com.minilabs.gautam.APMiniLab.main;
 import com.minilabs.gautam.Inheritance.Editor;
 import com.minilabs.gautam.Inheritance.Staffer;
@@ -67,6 +68,24 @@ public class AppController {
     String Minilabs(Model model) {
         return "Minilabs";
     }
+
+    @GetMapping("/dhruvSLinkList")
+    public String sort(
+            @RequestParam(name = "inputA", required = true, defaultValue = "abc") String inputA,
+            @RequestParam(name = "inputB", required = true, defaultValue = "bcd") String inputB,
+            @RequestParam(name = "inputC", required = true, defaultValue = "cde") String inputC,
+            Model model
+    ){
+        String[] sortArray = {inputA, inputB, inputC};
+
+        linklist list = new linklist(sortArray);
+
+        model.addAttribute("listA", Arrays.toString(list.sort()));
+
+        return "dhruvSLinkList";
+
+    }
+
 
     @GetMapping("/GautamAPMiniLab")
     public String test(@RequestParam(name = "minSteps", required = true, defaultValue = "1000") int minSteps, @RequestParam(name = "steps", required = true, defaultValue = "100") int steps, Model model){

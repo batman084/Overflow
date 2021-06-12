@@ -1,4 +1,4 @@
-package com.nighthawk.csa.Minilab.dhruvS.Inheritance;
+package com.minilabs.dhruvS.Inheritance;
 
 public class Cookie {
     public int chocChipNum;
