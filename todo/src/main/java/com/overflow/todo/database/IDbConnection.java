@@ -2,6 +2,8 @@ package com.overflow.todo.database;
 
 import com.overflow.todo.data.TodoItem;
 
+import java.util.ArrayList;
+
 public interface IDbConnection {
     TodoItem update(TodoItem item);
 
@@ -9,7 +11,7 @@ public interface IDbConnection {
 
     TodoItem find(int id);
 
-    TodoItem[] findAllForUser(int userId);
+    ArrayList<TodoItem> findAllForUser(int userId);
 
     void clearAll();
 }

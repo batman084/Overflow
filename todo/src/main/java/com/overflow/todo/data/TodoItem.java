@@ -1,6 +1,7 @@
 package com.overflow.todo.data;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class TodoItem {
@@ -10,9 +11,21 @@ public class TodoItem {
     private final String description;
     private final Date dateTime;
 
+    private final static Calendar CalendarInstance = Calendar.getInstance();
+
     private static final SimpleDateFormat DateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static final SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
     private static final SimpleDateFormat TimeFormat = new SimpleDateFormat("HH:mm");
+
+    public TodoItem(
+            int id,
+            int userId,
+            String title,
+            String description,
+            String dateTimeStr) {
+
+        this(id, userId, title, description, createDateFromString(dateTimeStr));
+    }
 
     public TodoItem(
             int id,
@@ -26,6 +39,11 @@ public class TodoItem {
         this.title = title;
         this.description = description;
         this.dateTime = dateTime;
+    }
+
+    public static Date createDate(int year, int month, int date, int hours, int minutes) {
+        CalendarInstance.set(year, month, date, hours, minutes);
+        return CalendarInstance.getTime();
     }
 
     public int getId() {
@@ -63,10 +81,21 @@ public class TodoItem {
     @Override
     public String toString() {
         return
-            "id         : " + this.id + "\n" +
-            "user id    : " + this.userId + "\n" +
-            "title      : " + this.title + "\n" +
-            "description: " + this.description + "\n" +
-            "date       : " + getDateTimeString() + "\n";
+                "id         : " + this.id + "\n" +
+                        "user id    : " + this.userId + "\n" +
+                        "title      : " + this.title + "\n" +
+                        "description: " + this.description + "\n" +
+                        "date       : " + getDateTimeString() + "\n";
+    }
+
+    private static Date createDateFromString(String dateTimeStr) {
+        Date dateTime = null;
+        try {
+            dateTime = DateTimeFormat.parse(dateTimeStr);
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+
+        return dateTime;
     }
 }

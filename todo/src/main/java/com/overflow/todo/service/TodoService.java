@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class TodoService implements ITodoService {
 
     private final IDbConnection dbConnection;
-    
+    private static final int DefaultUserId = 0;
+
     public TodoService() {
         this(null);
     }
@@ -25,26 +26,49 @@ public class TodoService implements ITodoService {
     }
 
     public TodoItem update(TodoItem todoItem) {
-        return null;
+
+        return this.dbConnection.update(todoItem);
     }
 
     public TodoItem delete(TodoItem todoItem) {
-        return null;
+        return this.dbConnection.remove(todoItem);
     }
 
-    public TodoItem find(String id) {
-        return null;
+    public TodoItem find(int id) {
+        return this.dbConnection.find(id);
     }
 
     public ArrayList<TodoItem> findAfter(Date dateTime) {
-        return null;
+        ArrayList<TodoItem> items = this.dbConnection.findAllForUser(DefaultUserId);
+        ArrayList<TodoItem> selectedItems = new ArrayList<TodoItem>();
+
+        for (TodoItem item : items) {
+            // pick only items with date greater than 
+            if (item.getDateTime().after(dateTime)) {
+                selectedItems.add(item);
+            }
+        }
+
+        return selectedItems;
     }
 
     public ArrayList<TodoItem> find(Date dateTime) {
-        return null;
+        ArrayList<TodoItem> items = this.dbConnection.findAllForUser(DefaultUserId);
+        ArrayList<TodoItem> selectedItems = new ArrayList<TodoItem>();
+
+        for (TodoItem item : items) {
+            // pick only items with the same year/month/date
+            if ((item.getDateTime().getDate() == dateTime.getDate())  &&
+                    (item.getDateTime().getMonth() == dateTime.getMonth()) &&
+                    (item.getDateTime().getYear() == dateTime.getYear())) {
+                selectedItems.add(item);
+            }
+        }
+
+        return selectedItems;
     }
 
     public ArrayList<TodoItem> find() {
-        return null;
+        return this.dbConnection.findAllForUser(DefaultUserId);
     }
 }

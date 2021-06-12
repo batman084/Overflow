@@ -10,7 +10,7 @@ public interface ITodoService {
 
     TodoItem delete(TodoItem todoItem);
 
-    TodoItem find(String id);
+    TodoItem find(int id);
 
     ArrayList<TodoItem> findAfter(Date dateTime);
 
