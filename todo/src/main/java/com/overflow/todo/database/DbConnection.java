@@ -1,8 +1,10 @@
 package com.overflow.todo.database;
 
+import com.overflow.todo.data.TodoItem;
+
 import java.sql.*;
 
-public class DbConnection {
+public class DbConnection implements IDbConnection{
     private static final String DefaultDatabaseName = "overflow.db";
     private final String databaseDirectory;
     private final String databaseName;
@@ -36,10 +38,10 @@ public class DbConnection {
         DbConnection dbConnection = new DbConnection(databaseDirectory, databaseName);
         // configure database
         dbConnection.createDatabase();
-        
+
         return dbConnection;
     }
-    
+
     private void createDatabase() {
         createDatabase(this.databaseUrl);
     }
@@ -80,5 +82,29 @@ public class DbConnection {
 
     private static String createDefaultPath() {
         return System.getProperty("user.dir");
+    }
+
+    @Override
+    public TodoItem update(TodoItem item) {
+        return null;
+    }
+
+    @Override
+    public TodoItem remove(TodoItem item) {
+        return null;
+    }
+    @Override
+    public TodoItem find(int id) {
+        return null;
+    }
+
+    @Override
+    public TodoItem[] findAllForUser(int userId) {
+        return null;
+    }
+
+    @Override
+    public void clearAll() {
+
     }
 }

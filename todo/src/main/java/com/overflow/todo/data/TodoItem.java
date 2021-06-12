@@ -1,5 +1,6 @@
 package com.overflow.todo.data;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TodoItem {
@@ -8,6 +9,10 @@ public class TodoItem {
     private final String title;
     private final String description;
     private final Date dateTime;
+
+    private static final SimpleDateFormat DateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static final SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    private static final SimpleDateFormat TimeFormat = new SimpleDateFormat("HH:mm");
 
     public TodoItem(
             int id,
@@ -23,8 +28,45 @@ public class TodoItem {
         this.dateTime = dateTime;
     }
 
+    public int getId() {
+        return this.id;
+    }
+
+    public int getUserId() {
+        return this.userId;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public Date getDateTime() {
+        return this.dateTime;
+    }
+
+    public String getDateTimeString() {
+        return DateTimeFormat.format(this.dateTime);
+    }
+
+    public String getDate() {
+        return DateFormat.format(this.dateTime);
+    }
+
+    public String getTime() {
+        return TimeFormat.format(this.dateTime);
+    }
+
     @Override
     public String toString() {
-        return "";
+        return
+            "id         : " + this.id + "\n" +
+            "user id    : " + this.userId + "\n" +
+            "title      : " + this.title + "\n" +
+            "description: " + this.description + "\n" +
+            "date       : " + getDateTimeString() + "\n";
     }
 }
