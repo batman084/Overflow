@@ -1,8 +1,10 @@
-<html xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
     <title>TO DO Myconnect area! What are you waiting for? Get started!</title>
 </head>
-
+<!--
 <style>
     {
         margin: 0;
@@ -100,47 +102,41 @@
     button:hover{
         border: none;
     }
-</style>
+</style>-->
 
-<body>
-<div class="banner">
-    <div class="navbar">
-        <ul>
-        </ul>
-    </div>
+<body><div layout:fragment="content" th:remove="tag">
+    <div style="margin: 2%;">
+        <div align="center">
+            <h1>ToDo:</h1>
+            <a href="/ToDoActivity/ToDoCreate/">Create ToDo</a>
+            <br/><br/>
 
-    <div class="content">
-        <h1>WELCOME TO THE TO DO SECTION</h1>
-        <P>IN THIS AREA YOU WILL BE ABLE TO CREATE A TO DO ASSIGNMENT FOR YOURSELF</P>
-        <P>PLEASE CLICK THE TO DO AND GIVE YOURSELF AN ASSIGNMENT TO DO FOR LATER</P>
-        <div>
-            <button onclick="window.location.href='/Reminders'"><span></span>Click here to make a to do assignment for yourself</button>
+            <table border="1" cellpadding="10">
+                <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Title </th>
+                    <th> Description </th>
+                    <th> Date </th>
+                    <th> Time </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="todo : ${todos}">
+                    <td><span th:text="${todo.id}"> Id </span></td>
+                    <td><span th:text="${todo.title}"> Title </span></td>
+                    <td><span th:text="${todo.description}"> Description </span></td>
+                    <td><span th:text="${todo.date}"> Date </span></td>
+                    <td><span th:text="${todo.time}"> Time </span></td>
+                    <td>
+                        <a th:href="@{/ToDoActivity/ToDoUpdate/{id}(id = ${todo.id})}">Update</a>
+                        <a th:href="@{/sql/ToDoDelete/{id}(id = ${todo.id})}">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div></body>
 
-    <table>
-        <thead>
-        <tr>
-            <th> Id </th>
-            <th> Title </th>
-            <th> Description </th>
-            <th> Date </th>
-            <th> Time </th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:if="${todos.empty}">
-            <td colspan="2"> No To Do Available </td>
-        </tr>
-        <tr th:each="todo : ${todos}">
-            <td><span th:text="${todo.id}"> Id </span></td>
-            <td><span th:text="${todo.title}"> Title </span></td>
-            <td><span th:text="${todo.description}"> Description </span></td>
-            <td><span th:text="${todo.date}"> Date </span></td>
-            <td><span th:text="${todo.time}"> Time </span></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-</body>
 </html>

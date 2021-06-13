@@ -59,10 +59,10 @@ public class AppController {
 
         model.addAttribute("todos", items);
 
-        // but it's possible to update and find items like this
+/*        // but it's possible to update and find items like this
         // TodoService todoService = new TodoService();
         // todoService.update(new TodoItem(0, 0, "todo 2", "todo 3 details", TodoItem.createDate(2021, 1, 2, 10, 30)));
-        // todoService.find(1);
+        // todoService.find(1);*/
 
 
         return "ToDoActivity";
