@@ -16,6 +16,11 @@
     <bytecodeTargetLevel>
       <module name="main" target="14" />
       <module name="main.test" target="14" />
+      <module name="menu" target="14" />
+      <module name="minilabs" target="14" />
+      <module name="myconnect" target="14" />
+      <module name="Overflow" target="1.8" />
+      <module name="todo" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>
