@@ -30,6 +30,10 @@ public class TodoService implements ITodoService {
         return this.dbConnection.update(todoItem);
     }
 
+    public TodoItem delete(int id) {
+        return this.dbConnection.remove(id);
+    }
+
     public TodoItem delete(TodoItem todoItem) {
         return this.dbConnection.remove(todoItem);
     }

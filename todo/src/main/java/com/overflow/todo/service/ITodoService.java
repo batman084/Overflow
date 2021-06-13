@@ -9,6 +9,7 @@ public interface ITodoService {
     TodoItem update(TodoItem todoItem);
 
     TodoItem delete(TodoItem todoItem);
+    TodoItem delete(int id);
 
     TodoItem find(int id);
 

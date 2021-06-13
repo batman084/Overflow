@@ -288,6 +288,14 @@ public class DbConnection implements IDbConnection {
     }
 
     @Override
+    public TodoItem remove(int id) {
+
+        TodoItem item = find(id);
+        delete(id);
+        return item;
+    }
+
+    @Override
     public TodoItem remove(TodoItem item) {
 
         delete(item.getId());

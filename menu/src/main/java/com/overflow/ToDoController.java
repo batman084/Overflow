@@ -15,7 +15,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ToDoController implements WebMvcConfigurer {
     @GetMapping("/TodoActivity/ToDoDelete/{id}")
     public String todoDelete(@PathVariable("id") long id) {
-        repository.delete(id);
+        // repository.delete(id);
+        TodoService todoService = new TodoService();
+        todoService.delete(1);
         return "redirect:/ToDoActivity";
     }
 }
