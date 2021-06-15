@@ -1,8 +1,8 @@
 package com.overflow.todo.database;
 
 import com.overflow.todo.data.TodoItem;
-import org.sqlite.SQLiteConfig;
-import org.sqlite.SQLiteOpenMode;
+/*import org.sqlite.SQLiteConfig;
+import org.sqlite.SQLiteOpenMode;*/
 
 import java.sql.*;
 import java.util.ArrayList;
