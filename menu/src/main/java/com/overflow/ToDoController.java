@@ -49,13 +49,14 @@ public class ToDoController implements WebMvcConfigurer {
 
 
     @GetMapping("/TodoActivity/ToDoUpdate/{id}")
-    public String todoUpdate(@PathVariable("id") long id, @RequestParam(name = "title", required = true, defaultValue = "abc") String title, @RequestParam(name = "description", required = true, defaultValue = "abc") String description) {
+    public String todoUpdate(@PathVariable("id") long id, @RequestParam(name = "title", required = true, defaultValue = "abc") String title, @RequestParam(name = "description", required = true, defaultValue = "abc") String description, Model model) {
         TodoService todoService = new TodoService();
 
         TodoItem item = todoService.find((int)id);
 
         TodoItem todo = new TodoItem(item.getId(), item.getUserId(), title, description, item.getDateTime());
         todoService.update(todo);
+
         return "redirect:/ToDoActivity";
     }
     @GetMapping("/TodoActivity/ToDoDelete/{id}")
