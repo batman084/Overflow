@@ -20,6 +20,7 @@
       <module name="minilabs" target="14" />
       <module name="myconnect" target="14" />
       <module name="Overflow" target="1.8" />
+      <module name="spring-boot-thymeleaf" target="1.8" />
       <module name="todo" target="14" />
     </bytecodeTargetLevel>
   </component>
