@@ -1,6 +1,8 @@
 package com.overflow;
 
+import com.minilabs.dhruvS.Inheritance.Cookie;
 import com.minilabs.dhruvS.LinkList.linklist;
+import com.minilabs.dhruvS.Recursion.Euclid;
 import com.minilabs.gautam.APMiniLab.main;
 import com.minilabs.gautam.Inheritance.Editor;
 import com.minilabs.gautam.Inheritance.Staffer;
@@ -83,6 +85,33 @@ public class AppController {
 
         return "dhruvSLinkList";
 
+    }
+
+    @GetMapping("/dhruvSInheritance")
+    public String dhruvSInheritance(
+            @RequestParam(name = "inputA", required = true, defaultValue = "8") Integer inputA,
+            @RequestParam(name = "inputB", required = true, defaultValue = "3") Integer inputB,
+            @RequestParam(name = "inputC", required = true, defaultValue = "5") Integer inputC,
+            Model model
+    ){
+        Cookie.mnmCookie a = new Cookie.mnmCookie(inputA, inputB, inputC);
+
+        model.addAttribute("output", a.toString());
+
+
+        return "dhruvSInheritance";
+
+    }
+
+
+
+    @GetMapping("/dhruvRecursion")
+    public String dhruvRecursion(@RequestParam(name = "num1", required = true, defaultValue = "2") Integer num1, @RequestParam(name = "num2", required = true, defaultValue = "9") Integer num2,
+                                 Model model
+    ){
+        model.addAttribute("gcf", Euclid.gcd(num1, num2));
+
+        return "dhruvRecursion";
     }
 
 

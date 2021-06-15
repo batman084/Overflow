@@ -1,6 +1,6 @@
-package com.nighthawk.csa.Minilab.dhruvS.Recursion;
+package com.minilabs.dhruvS.Recursion;
 
-import static com.nighthawk.csa.Minilab.dhruvS.Recursion.Euclid.gcd;
+import static com.minilabs.dhruvS.Recursion.Euclid.gcd;
 
 public class main {
     public static void main(String[] args)

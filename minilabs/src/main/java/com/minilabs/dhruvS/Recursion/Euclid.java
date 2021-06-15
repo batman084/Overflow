@@ -1,4 +1,4 @@
-package com.nighthawk.csa.Minilab.dhruvS.Recursion;
+package com.minilabs.dhruvS.Recursion;
 
 public class Euclid {
 

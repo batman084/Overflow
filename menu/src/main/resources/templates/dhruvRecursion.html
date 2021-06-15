@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dhruv's Inheritance MiniLab</title>
-    <a href="/Minilabs">Home</a>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <title>Dhruv's Recursion MiniLab</title>
+  <a href="/Minilabs">Home</a>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <style>
        *{
@@ -106,24 +106,20 @@
 </style>
 <body>
 
-<form id="dhruvSInheritance" action="/dhruvSInheritance" method="GET">
-    <h1>Enter numbers:</h1>
+<form id="dhruvRecursion" action="/dhruvRecursion" method="GET">
+  <h1>Enter numbers:</h1>
 
-    <input name="inputA" id="inputA" required type="text"><br>
+  <input name="num1" id="num1" required type="text"><br>
 
-    <label for="inputA">First Number:</label><br>
-    <input name="inputB" id="inputB" required type="text"><br>
-    <label for="inputB">Second Number:</label><br>
+  <label for="num1">First Number:</label><br>
+  <input name="num2" id="num2" required type="text"><br>
+  <label for="num2">Second Number:</label><br>
 
-    <input name="inputC" id="inputC" required type="text"><br>
-    <label for="inputC">Third Number:</label><br>
+  <button>Run:</button>
 
+  <br>
 
-    <button>Run:</button>
-
-    <br>
-
-    <p th:text = "${output}"></p>
+  <p th:text = "'GCF is: ' + ${gcf}"></p>
 
 
 </form>
