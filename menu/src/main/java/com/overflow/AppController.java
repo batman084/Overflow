@@ -55,11 +55,6 @@ public class AppController {
         model.addAttribute("assignmentLink1", test.return1link());
         model.addAttribute("assignmentLink2", test.return2link());
         model.addAttribute("assignmentLink3", test.return3link());
-
-        model.addAttribute("assignment1desc", test.return1desc());
-        model.addAttribute("assignment2desc", test.return2desc());
-        model.addAttribute("assignment2desc", test.return3desc());
-
         return "MyConnect";
     }
 

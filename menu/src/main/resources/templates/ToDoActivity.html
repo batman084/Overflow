@@ -3,106 +3,14 @@
       layout:decorate="~{layout}" lang="en">
 <head><div layout:fragment="metadata" th:remove="tag">
     <title>TO DO Myconnect area! What are you waiting for? Get started!</title>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+    </ul>
+    <link rel="stylesheet" href="/todo.css">
 </head>
-<!--
-<style>
-    {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background-color: red;
-    }
-    .banner{
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-
-    }
-    .navbar{
-        width: 85%;
-        margin: auto;
-        padding: 35px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .Logo{
-        width: 120px;
-        cursor: pointer;
-    }
-    .navbar ul li{
-        list-style: none;
-        display: inline-block;
-        margin: 20px;
-        position: relative;
-    }
-    .navbar ul li a{
-        text-decoration: none;
-        color: #ffffff;
-        text-transform: uppercase;
-    }
-    .navbar ul li::after{
-        content: '';
-        height: 3px;
-        width: 0;
-        background: #009688;
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        transition: 0.5s;
-    }
-    .navbar ul li:hover::after{
-        width: 100%;
-    }
-    .content{
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-        color: #fff;
-    }
-    .content h1{
-        font-size: 70px;
-        margin-top: 80px;
-    }
-    .content p{
-        margin: 20px auto;
-        font-weight: 100;
-        line-height: 25px;
-    }
-    button{
-        width: 200px;
-        padding: 15px 0;
-        text-align: center;
-        margin: 20px 10px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: 2px solid #005596;
-        background: transparent;
-        color: #fff;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-    }
-    span{
-        background: #009687;
-        height: 100%;
-        width: 0;
-        border-radius: 25px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        transition: 0.5s;
-    }
-    button:hover span{
-        width: 100%;
-    }
-    button:hover{
-        border: none;
-    }
-</style>-->
 
 <body><div layout:fragment="content" th:remove="tag">
     <div style="margin: 2%;">
@@ -115,16 +23,15 @@
             <table border="1" cellpadding="10">
                 <thead>
                 <tr>
-                    <th> Id </th>
                     <th> Title </th>
                     <th> Description </th>
                     <th> Date </th>
                     <th> Time </th>
+                    <th> Actions </th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="todo : ${todos}">
-                    <td><span th:text="${todo.id}"> Id </span></td>
                     <td><span th:text="${todo.title}"> Title </span></td>
                     <td><span th:text="${todo.description}"> Description </span></td>
                     <td><span th:text="${todo.date}"> Date </span></td>
@@ -154,7 +61,7 @@
                     <label for="minUpdate">New Minute:</label><br>
                     <input name="minUpdate" id="minUpdate" required type="number"><br>
                     <button>Run</button>
-                </form>
+                </form><br><br>
 
                 <br>
                 </tbody>
