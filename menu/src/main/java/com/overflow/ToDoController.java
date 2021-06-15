@@ -3,7 +3,6 @@ package com.overflow;
 import com.overflow.todo.data.TodoItem;
 import com.overflow.todo.service.TodoService;
 import com.overflow.todo.tests.ServiceTest;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,16 +11,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 @Controller
 public class ToDoController implements WebMvcConfigurer {
     final String defaultID = "6936~rffaXRfNKIkE5QgIKa6lsNuIaOh7vxtJSvIRerholiBgbswdHTDpXfX1pNVB5Mf1";
+    String titleUpdate, descUpdate;
+    int yearUpdate, dateUpdate, monthUpdate, hourUpdate, minUpdate;
+    TodoService todoService = new TodoService();
 
     @GetMapping("/ToDoActivity/ToDoCreate")
     public String todoCreate() {
-        TodoService todoService = new TodoService();
-
         TodoItem item = new TodoItem(0, 0, "New Task", "New Task Details", TodoItem.createDate(2021, 6, 15, 10, 00));
         todoService.update(item);
         return "redirect:/ToDoActivity";
@@ -46,32 +45,44 @@ public class ToDoController implements WebMvcConfigurer {
         return "ToDoUpdate";
     }*/
 
+    @GetMapping("/ToDoActivity/ToDoUpdate")
+    public String todoUpdatePage(@RequestParam(name = "titleUpdate", defaultValue = "abc") String title,
+                                 @RequestParam(name = "descriptionUpdate", defaultValue = "abc") String description,
+                                 @RequestParam(name = "yearUpdate", defaultValue = "abc") int year,
+                                 @RequestParam(name = "dateUpdate", defaultValue = "abc") int date,
+                                 @RequestParam(name = "monthUpdate", defaultValue = "abc") int month,
+                                 @RequestParam(name = "hourUpdate", defaultValue = "abc") int hour,
+                                 @RequestParam(name = "minUpdate", defaultValue = "abc") int min,
+                                 Model model) {
+        titleUpdate = title;
+        descUpdate = description;
+        yearUpdate = year;
+        monthUpdate = month;
+        dateUpdate = date;
+        hourUpdate = hour;
+        minUpdate = min;
 
+        return "redirect:/ToDoActivity";
+    }
 
     @GetMapping("/TodoActivity/ToDoUpdate/{id}")
-    public String todoUpdate(@PathVariable("id") long id, @RequestParam(name = "title", required = true, defaultValue = "abc") String title, @RequestParam(name = "description", required = true, defaultValue = "abc") String description, Model model) {
-        TodoService todoService = new TodoService();
-
+    public String todoUpdate(@PathVariable("id") long id, Model model) {
         TodoItem item = todoService.find((int)id);
 
-        TodoItem todo = new TodoItem(item.getId(), item.getUserId(), title, description, item.getDateTime());
+        TodoItem todo = new TodoItem(item.getId(), item.getUserId(), titleUpdate, descUpdate, TodoItem.createDate(yearUpdate, monthUpdate, dateUpdate, hourUpdate, minUpdate));
         todoService.update(todo);
 
         return "redirect:/ToDoActivity";
     }
     @GetMapping("/TodoActivity/ToDoDelete/{id}")
     public String todoDelete(@PathVariable("id") long id) {
-        TodoService todoService = new TodoService();
         todoService.delete((int)id);
         return "redirect:/ToDoActivity";
     }
 
 
-
     @GetMapping("/ToDoActivity")
     String ToDoActivity(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
-
-        TodoService todoService = new TodoService();
         ArrayList<TodoItem> items = todoService.find();
 
         model.addAttribute("todos", items);

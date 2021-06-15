@@ -6,6 +6,7 @@
     <title>Update ToDo</title>
 </head>
 <body><div layout:fragment="content" th:remove="tag">
+
 <h1>Enter in new information to update your ToDo item:</h1>
 <form action="#" th:action="@{/ToDoActivity/ToDoUpdate}" th:object="${todo}" method="POST">
   <table>

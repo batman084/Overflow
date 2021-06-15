@@ -135,18 +135,31 @@
                         <a th:href="@{/TodoActivity/ToDoDelete/{id}(id = ${todo.id})}">Delete</a>
                     </td>
                 </tr>
+                <form id="todoUpdatePage" action="/ToDoActivity/ToDoUpdate" method="get">
+                    <label for="titleUpdate">New Title</label><br>
+                    <input name="titleUpdate" id="titleUpdate" required type="text"><br>
 
-                <input name="title" id="title" required type="text"><br>
-                <label for="title">New Title</label><br>
+                    <label for="descriptionUpdate">New Description:</label><br>
+                    <input name="descriptionUpdate" id="descriptionUpdate" required type="text"><br><br>
 
-                <input name="description" id="description" required type="text"><br>
-                <label for="description">New Description:</label><br>
+                    <label for="yearUpdate">New Year:</label><br>
+                    <input name="yearUpdate" id="yearUpdate" required type="number"><br>
+                    <label for="dateUpdate">New Date:</label><br>
+                    <input name="dateUpdate" id="dateUpdate" required type="number"><br>
+                    <label for="monthUpdate">New Month:</label><br>
+                    <input name="monthUpdate" id="monthUpdate" required type="number"><br><br>
 
-                <button>Run</button>
+                    <label for="hourUpdate">New Hour:</label><br>
+                    <input name="hourUpdate" id="hourUpdate" required type="number"><br>
+                    <label for="minUpdate">New Minute:</label><br>
+                    <input name="minUpdate" id="minUpdate" required type="number"><br>
+                    <button>Run</button>
+                </form>
 
                 <br>
                 </tbody>
             </table>
+
         </div>
     </div>
 </div></body>

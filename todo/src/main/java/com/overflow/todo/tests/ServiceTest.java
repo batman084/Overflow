@@ -51,10 +51,10 @@ public class ServiceTest {
         TodoService service = new TodoService(db);
 
         System.out.println("inserting 4 items for default user and 1 item for a different user...");
-        service.update(new TodoItem(0, 0, "(1) Math", "Math assignment is due", TodoItem.createDate(2021, 6, 15, 13, 30)));
-        service.update(new TodoItem(0, 0, "(2) Biology", "Biology assignment is due", TodoItem.createDate(2021, 6, 15, 14, 30)));
-        service.update(new TodoItem(0, 0, "(3) Chemistry", "Chemistry assignment is due", TodoItem.createDate(2021, 6, 15, 10, 30)));
-        service.update(new TodoItem(0, 0, "(4) Physics", "Physics assignment is due", TodoItem.createDate(2021, 6, 16, 9, 0)));
-        service.update(new TodoItem(0, 1, "Another Assignment", "An assignment for another user", TodoItem.createDate(2021, 1, 3, 9, 0)));
+        service.update(new TodoItem(0, 0, "(1) Math", "Math assignment is due", TodoItem.createDate(2020, 6, 15, 13, 30)));
+        service.update(new TodoItem(0, 0, "(2) Biology", "Biology assignment is due", TodoItem.createDate(2020, 6, 15, 14, 30)));
+        service.update(new TodoItem(0, 0, "(3) Chemistry", "Chemistry assignment is due", TodoItem.createDate(2020, 6, 15, 10, 30)));
+        service.update(new TodoItem(0, 0, "(4) Physics", "Physics assignment is due", TodoItem.createDate(2020, 6, 16, 9, 0)));
+        service.update(new TodoItem(0, 1, "Another Assignment", "An assignment for another user", TodoItem.createDate(2020, 1, 3, 9, 0)));
     }
 }
