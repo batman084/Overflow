@@ -27,7 +27,8 @@ public class ToDoController implements WebMvcConfigurer {
         return "redirect:/ToDoActivity";
     }
 
-    @GetMapping("/ToDoActivity/ToDoUpdate/{id}")
+
+/*    @GetMapping("/ToDoActivity/ToDoUpdate/{id}")
     public String todoUpdate(@PathVariable("id") long id, Model model) {
         TodoService todoService = new TodoService();
         TodoItem item = todoService.find((int)id);
@@ -43,14 +44,28 @@ public class ToDoController implements WebMvcConfigurer {
         model.addAttribute("description", item.getDescription());
 
         return "ToDoUpdate";
-    }
+    }*/
 
+
+
+    @GetMapping("/TodoActivity/ToDoUpdate/{id}")
+    public String todoUpdate(@PathVariable("id") long id, @RequestParam(name = "title", required = true, defaultValue = "abc") String title, @RequestParam(name = "description", required = true, defaultValue = "abc") String description) {
+        TodoService todoService = new TodoService();
+
+        TodoItem item = todoService.find((int)id);
+
+        TodoItem todo = new TodoItem(item.getId(), item.getUserId(), title, description, item.getDateTime());
+        todoService.update(todo);
+        return "redirect:/ToDoActivity";
+    }
     @GetMapping("/TodoActivity/ToDoDelete/{id}")
     public String todoDelete(@PathVariable("id") long id) {
         TodoService todoService = new TodoService();
         todoService.delete((int)id);
         return "redirect:/ToDoActivity";
     }
+
+
 
     @GetMapping("/ToDoActivity")
     String ToDoActivity(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
