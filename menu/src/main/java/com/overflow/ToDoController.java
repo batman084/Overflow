@@ -11,13 +11,93 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+
 @Controller
 public class ToDoController implements WebMvcConfigurer {
+    final String defaultID = "6936~rffaXRfNKIkE5QgIKa6lsNuIaOh7vxtJSvIRerholiBgbswdHTDpXfX1pNVB5Mf1";
+
+    @GetMapping("/ToDoActivity/ToDoCreate")
+    public String todoCreate() {
+        TodoService todoService = new TodoService();
+
+        TodoItem item = new TodoItem(0, 0, "New Task", "New Task Details", TodoItem.createDate(2021, 6, 15, 10, 00));
+        todoService.update(item);
+        return "redirect:/ToDoActivity";
+    }
+
+
+/*    @GetMapping("/ToDoActivity/ToDoUpdate/{id}")
+    public String todoUpdate(@PathVariable("id") long id, Model model) {
+        TodoService todoService = new TodoService();
+        TodoItem item = todoService.find((int)id);
+
+        if (item != null) {
+            String updateDescription = item.getDescription() + " update";
+            TodoItem updatedItem = new TodoItem(item.getId(), item.getUserId(), item.getTitle(), updateDescription, item.getDateTime());
+            todoService.update(updatedItem);
+        }
+
+        model.addAttribute("id", id);
+        model.addAttribute("title", item.getTitle());
+        model.addAttribute("description", item.getDescription());
+
+        return "ToDoUpdate";
+    }*/
+
+
+
+    @GetMapping("/TodoActivity/ToDoUpdate/{id}")
+    public String todoUpdate(@PathVariable("id") long id, @RequestParam(name = "title", required = true, defaultValue = "abc") String title, @RequestParam(name = "description", required = true, defaultValue = "abc") String description, Model model) {
+        TodoService todoService = new TodoService();
+
+        TodoItem item = todoService.find((int)id);
+
+        TodoItem todo = new TodoItem(item.getId(), item.getUserId(), title, description, item.getDateTime());
+        todoService.update(todo);
+
+        return "redirect:/ToDoActivity";
+    }
     @GetMapping("/TodoActivity/ToDoDelete/{id}")
     public String todoDelete(@PathVariable("id") long id) {
-        // repository.delete(id);
         TodoService todoService = new TodoService();
-        todoService.delete(1);
+        todoService.delete((int)id);
         return "redirect:/ToDoActivity";
+    }
+
+
+
+    @GetMapping("/ToDoActivity")
+    String ToDoActivity(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
+
+        TodoService todoService = new TodoService();
+        ArrayList<TodoItem> items = todoService.find();
+
+        model.addAttribute("todos", items);
+
+        return "ToDoActivity";
+    }
+
+    @GetMapping("/ToDoActivity/ToDoGenerateTest")
+    String ToDoGenerateTest(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
+
+        // get items from a test
+        ServiceTest.generateSampleItems();
+
+        TodoService todoService = new TodoService();
+        ArrayList<TodoItem> items = todoService.find();
+
+        model.addAttribute("todos", items);
+
+        // but it's possible to update and find items like this
+/*
+        TodoService todoService = new TodoService();
+        todoService.update(new TodoItem(0, 0, "todo 2", "todo 3 details", TodoItem.createDate(2021, 1, 2, 10, 30)));
+        todoService.find(1);
+*/
+
+
+        return "ToDoActivity";
     }
 }

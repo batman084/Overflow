@@ -13,10 +13,6 @@ import com.minilabs.gautam.SortsInt.Selection;
 import com.minilabs.gautam.SortsPOJO.NameG;
 import com.myconnect.Login;
 import com.myconnect.MyConnect;
-import com.minilabs.Minilabs;
-import com.overflow.todo.data.TodoItem;
-import com.overflow.todo.service.TodoService;
-import com.overflow.todo.tests.ServiceTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,9 +20,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 @Controller
 @ComponentScan()
@@ -50,34 +44,6 @@ public class AppController {
         }
         return "MyConnectLogin";
     }
-
-    @GetMapping("/ToDoActivity")
-    String ToDoActivity(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
-
-        // get items from a test
-        ArrayList<TodoItem> items = runTodoTest();
-
-        model.addAttribute("todos", items);
-
-/*        // but it's possible to update and find items like this
-        // TodoService todoService = new TodoService();
-        // todoService.update(new TodoItem(0, 0, "todo 2", "todo 3 details", TodoItem.createDate(2021, 1, 2, 10, 30)));
-        // todoService.find(1);*/
-
-
-        return "ToDoActivity";
-    }
-
-    private ArrayList<TodoItem> runTodoTest() {
-
-        // run tests with update, finds, etc.
-        ServiceTest.run();
-        TodoService todoService = new TodoService();
-
-        // find all items in database
-        return todoService.find();
-    }
-
 
     @GetMapping("/MyConnect")
     String MyConnect(Model model) {

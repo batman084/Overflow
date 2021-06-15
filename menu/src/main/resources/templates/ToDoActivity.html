@@ -109,6 +109,7 @@
         <div align="center">
             <h1>ToDo:</h1>
             <a href="/ToDoActivity/ToDoCreate/">Create ToDo</a>
+            <a href="/ToDoActivity/ToDoGenerateTest/">Generate Test ToDos</a>
             <br/><br/>
 
             <table border="1" cellpadding="10">
@@ -129,10 +130,21 @@
                     <td><span th:text="${todo.date}"> Date </span></td>
                     <td><span th:text="${todo.time}"> Time </span></td>
                     <td>
-                        <a th:href="@{/ToDoActivity/ToDoUpdate/{id}(id = ${todo.id})}">Update</a>
-                        <a th:href="@{/sql/ToDoDelete/{id}(id = ${todo.id})}">Delete</a>
+
+                        <a th:href="@{/TodoActivity/ToDoUpdate/{id}(id = ${todo.id})}">Update</a>
+                        <a th:href="@{/TodoActivity/ToDoDelete/{id}(id = ${todo.id})}">Delete</a>
                     </td>
                 </tr>
+
+                <input name="title" id="title" required type="text"><br>
+                <label for="title">New Title</label><br>
+
+                <input name="description" id="description" required type="text"><br>
+                <label for="description">New Description:</label><br>
+
+                <button>Run</button>
+
+                <br>
                 </tbody>
             </table>
         </div>
