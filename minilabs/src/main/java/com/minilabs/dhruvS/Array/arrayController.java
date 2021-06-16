@@ -1,3 +1,4 @@
+/*
 package com.minilabs.dhruvS.Array;
 
 public class arrayController {
@@ -35,4 +36,4 @@ public class arrayController {
 
 
 
-}
+}*/

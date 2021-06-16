@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dhruv's Array MiniLab</title>
-  <a href="/Minilabs">Home</a>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Dhruv's Sorts MiniLab</title>
+    <a href="/Minilabs">Home</a>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <style>
        *{
@@ -106,35 +106,37 @@
 </style>
 <body>
 
-<form id="dhruvArray" action="/dhruvArray" method="GET">
-  <h1>Enter numbers to be sorted alternately:</h1>
+<form id="dhruvSorts" action="/dhruvSorts" method="GET">
+    <h1>Enter numbers to be sorted:</h1>
 
-  <input name="num1" id="num1" required type="text"><br>
-  <label for="num1">First Number:</label><br>
+    <input name="num1" id="num1" required type="text"><br>
+    <label for="num1">First Number:</label><br>
 
-  <input name="num2" id="num2" required type="text"><br>
-  <label for="num2">Second Number:</label><br>
+    <input name="num2" id="num2" required type="text"><br>
+    <label for="num2">Second Number:</label><br>
 
-  <input name="num3" id="num3" required type="text"><br>
-  <label for="num3">Third Number:</label><br>
+    <input name="num3" id="num3" required type="text"><br>
+    <label for="num3">Third Number:</label><br>
 
-  <input name="num4" id="num4" required type="text"><br>
-  <label for="num4">Fourth Number:</label><br>
+    <input name="num4" id="num4" required type="text"><br>
+    <label for="num4">Fourth Number:</label><br>
 
-  <input name="num5" id="num5" required type="text"><br>
-  <label for="num5">Fifth Number:</label><br>
+    <input name="num5" id="num5" required type="text"><br>
+    <label for="num5">Fifth Number:</label><br>
 
-  <input name="num6" id="num6" required type="text"><br>
-  <label for="num6">Sixth Number:</label><br>
+    <input name="num6" id="num6" required type="text"><br>
+    <label for="num6">Sixth Number:</label><br>
 
 
 
-  <button>Run:</button>
+    <button>Run:</button>
 
-  <br>
+    <br>
 
-  <p th:text = "'Array 1: ' + ${arr1}"></p>
-  <p th:text = "'Array 2: ' + ${arr2}"></p>
+    <p th:text = "'Bubble Sort Output: ' + ${bubblesort}"></p>
+    <p th:text = "'Insertion Sort Output: ' + ${insertionsort}"></p>
+    <p th:text = "'Selection Sort Output: ' + ${selectionsort}"></p>
+
 
 
 </form>
