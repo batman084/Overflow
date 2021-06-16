@@ -11,8 +11,6 @@ public class TodoItem {
     private final String description;
     private final Date dateTime;
 
-    private final static Calendar CalendarInstance = Calendar.getInstance();
-
     private static final SimpleDateFormat DateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static final SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
     private static final SimpleDateFormat TimeFormat = new SimpleDateFormat("HH:mm");
@@ -42,8 +40,9 @@ public class TodoItem {
     }
 
     public static Date createDate(int year, int month, int date, int hours, int minutes) {
-        CalendarInstance.set(year, month, date, hours, minutes);
-        return CalendarInstance.getTime();
+        Calendar calendarInstance = Calendar.getInstance();
+        calendarInstance.set(year, month - 1, date, hours, minutes, 0);
+        return calendarInstance.getTime();
     }
 
     public int getId() {
