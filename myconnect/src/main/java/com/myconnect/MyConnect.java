@@ -45,7 +45,7 @@ public class MyConnect {
 
     public MyConnect(String a) {
         String API_KEY = a;
-        url_string = "https://poway.instructure.com/api/v1/users/self/upcoming_events?access_token=" + API_KEY;
+        url_string = "https://k12.instructure.com/api/v1/users/self/upcoming_events?access_token=" + API_KEY;
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ssZ");
         Date result1;
