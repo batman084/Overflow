@@ -9,7 +9,7 @@
 <body>
 
 <form id="dhruvArray" action="/dhruvArray" method="GET">
-  <h1>Enter numbers:</h1>
+  <h1>Enter numbers to be sorted alternately:</h1>
 
   <input name="num1" id="num1" required type="text"><br>
   <label for="num1">First Number:</label><br>
@@ -35,7 +35,8 @@
 
   <br>
 
-  <p th:text = "'GCF is: ' + ${gcf}"></p>
+  <p th:text = "'Array 1: ' + ${arr1}"></p>
+  <p th:text = "'Array 2: ' + ${arr2}"></p>
 
 
 </form>

@@ -3,6 +3,7 @@ package com.overflow;
 import com.minilabs.dhruvS.Inheritance.Cookie;
 import com.minilabs.dhruvS.LinkList.linklist;
 import com.minilabs.dhruvS.Recursion.Euclid;
+import com.minilabs.dhruvS.Sorts.Sorts;
 import com.minilabs.gautam.APMiniLab.main;
 import com.minilabs.gautam.Inheritance.Editor;
 import com.minilabs.gautam.Inheritance.Staffer;
@@ -107,6 +108,51 @@ public class AppController {
         model.addAttribute("gcf", Euclid.gcd(num1, num2));
 
         return "dhruvRecursion";
+    }
+
+    @GetMapping("/dhruvSorts")
+    public String dhruvSorts(@RequestParam(name = "num1", required = true, defaultValue = "2") int num1, @RequestParam(name = "num2", required = true, defaultValue = "9") int num2, Model model,
+                             @RequestParam(name = "num3", required = true, defaultValue = "7") int num3, @RequestParam(name = "num4", required = true, defaultValue = "4") int num4, @RequestParam(name = "num5", required = true, defaultValue = "5") int num5, @RequestParam(name = "num6", required = true, defaultValue = "6") int num6
+    ){
+        Sorts a = new Sorts(num1, num2, num3, num4, num5, num6);
+        model.addAttribute("bubblesort", Arrays.toString(a.bubbleSort(num1, num2, num3, num4, num5, num6)));
+        model.addAttribute("insertionsort", Arrays.toString(a.insertionSort(num1, num2, num3, num4, num5, num6)));
+        model.addAttribute("selectionsort", Arrays.toString(a.selectionSort(num1, num2, num3, num4, num5, num6)));
+
+
+
+        return "dhruvSorts";
+    }
+
+    @GetMapping("/dhruvArray")
+    public String dhruvArray(@RequestParam(name = "num1", required = true, defaultValue = "2") int num1, @RequestParam(name = "num2", required = true, defaultValue = "9") int num2, Model model,
+                             @RequestParam(name = "num3", required = true, defaultValue = "7") int num3, @RequestParam(name = "num4", required = true, defaultValue = "4") int num4, @RequestParam(name = "num5", required = true, defaultValue = "5") int num5, @RequestParam(name = "num6", required = true, defaultValue = "6") int num6
+    ){
+
+
+
+        //   String a = arr[0] + ", " + arr[2] + ", " + arr[4];
+      //  String b = arr[1] + ", " + arr[3] + ", " + arr[5];
+System.out.println(Arrays.toString(array(num1, num2, num3, num4, num5, num6)));
+
+
+        model.addAttribute("arr1", Arrays.toString(array(num1, num2, num3, num4, num5, num6)));
+        model.addAttribute("arr2",Arrays.toString(array2(num1, num2, num3, num4, num5, num6)));
+
+
+        return "dhruvArray";
+    }
+
+    public int[] array(int a, int b, int c, int d, int e, int f) {
+        int[] arr = {a, c, e};
+      //  String arr = arra[0] + ", " + arra[2] + ", " + arra[4];
+        return  arr;
+    }
+
+    public int[] array2(int a, int b, int c, int d, int e, int f) {
+        int[] arr2 = {b, d, e};
+     //   String arr2 = arra2[1] + ", " + arra2[3] + ", " + arra2[5];
+        return  arr2;
     }
 
 
