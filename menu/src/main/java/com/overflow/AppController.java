@@ -42,7 +42,7 @@ public class AppController {
         return "Deployment";
     }
 
-    @GetMapping("/snakeeyes")
+    @GetMapping("/API")
     String API() {
         return "API";
     }

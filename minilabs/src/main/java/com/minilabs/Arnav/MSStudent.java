@@ -1,3 +1,4 @@
+/*
 package com.minilabs.Arnav;
 import java.util.ArrayList;
 
@@ -21,3 +22,4 @@ public class MSSInheritance extends Student {
     }
 
 }
+*/
