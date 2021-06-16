@@ -10,6 +10,7 @@
       <module>menu</module>
       <module>myconnect</module>
         <module>todo</module>
+      <module>api</module>
     </modules>
     <name>main</name>
   <url>http://maven.apache.org</url>

@@ -9,11 +9,13 @@
         <module name="minilabs" />
         <module name="todo" />
         <module name="myconnect" />
+        <module name="api" />
         <module name="menu" />
         <module name="OverflowV7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api" target="14" />
       <module name="main" target="14" />
       <module name="main.test" target="14" />
       <module name="menu" target="14" />

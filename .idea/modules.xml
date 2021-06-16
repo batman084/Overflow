@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/api/api.iml" filepath="$PROJECT_DIR$/api/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/menu/menu.iml" filepath="$PROJECT_DIR$/menu/menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/minilabs/minilabs.iml" filepath="$PROJECT_DIR$/minilabs/minilabs.iml" />
       <module fileurl="file://$PROJECT_DIR$/myconnect/myconnect.iml" filepath="$PROJECT_DIR$/myconnect/myconnect.iml" />

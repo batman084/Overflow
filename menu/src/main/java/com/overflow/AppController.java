@@ -37,6 +37,16 @@ public class AppController {
         return "index";
     }
 
+    @GetMapping("/Deployment")
+    String deployment() {
+        return "Deployment";
+    }
+
+    @GetMapping("/snakeeyes")
+    String API() {
+        return "API";
+    }
+
     @GetMapping("/MyConnectLogin")
     String MyConnectLogin(@RequestParam(name = "id4", required = true, defaultValue = defaultID) String id1, Model model) {
         test1 = new Login(id1);
