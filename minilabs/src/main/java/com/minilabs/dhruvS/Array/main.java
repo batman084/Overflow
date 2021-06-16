@@ -1,3 +1,4 @@
+/*
 package com.minilabs.dhruvS.Array;
 
 import com.minilabs.dhruvS.Array.arrayController;
@@ -11,3 +12,4 @@ public class main {
         System.out.println(x);
     }
 }
+*/
