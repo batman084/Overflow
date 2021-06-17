@@ -5,8 +5,8 @@
 <h3>Arnav and Jacob</h3>
 This week Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
 Commit work for Jacob:
+*Note: The first commit was done on a branch by Jacob and merged to main by Gautum*
 - [Commit Link](https://github.com/batman084/Overflow/commit/1ac2a9cec88142c11ffa87af6de1f867d448696a)
-*Note: This commit was done on a branch by Jacob by merged to main by Gautum*
 - [Commit Link](https://github.com/batman084/Overflow/commit/12cda07e081ba57e7f0fb058b8915b26dd295cb5)
 - [Commit Link](https://github.com/batman084/Overflow/commit/ff81c5984b35bee5dc947f58f68837790ead665a)
 
@@ -33,7 +33,8 @@ Here is what we plan to do this week:
 <h3>Jacob & Arnav</h3>
 This week, Arnav and I (Jacob) worked on the ToDo feature of the project.  
 <br><br>
-Here are the links to our commits: Jacob's and Arnav's Code 
+Here are the links to our commits: Jacob's and Arnav's Code
+
 - [Commit Link](https://github.com/batman084/Overflow/commit/6d2fbc915cf9d1d18283a9b5083c1fec54f01236)
 - [Commit Link](https://github.com/batman084/Overflow/commit/0c8a83a178b05f6bc33f4e1a866d1daacd2a2926)
 - [Commit Link](https://github.com/batman084/Overflow/commit/9f6a37f1ec9547306e8667d98f0a1804a8c78f81)
