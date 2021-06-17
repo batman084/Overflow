@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gautam's Linked Lists MiniLab</title>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+    <link rel="stylesheet" href="/overarching.css">
+</head>
+<body>
+
+<form id="GautamLinkedList" action="/GautamLinkedList" method="GET">
+    <h1>Input:</h1>
+
+    <input name="inputA" id="inputA" required type="text"><br>
+    <label for="inputA">First Input:</label><br>
+
+    <input name="inputB" id="inputB" required type="text"><br>
+    <label for="inputB">Second Input:</label><br>
+
+    <input name="inputC" id="inputC" required type="text"><br>
+    <label for="inputC">Third Input:</label><br>
+
+    <input name="inputD" id="inputD" required type="text"><br>
+    <label for="inputD">Fourth Input:</label><br>
+
+    <button>View Output:</button>
+
+    <br>
+
+    <p th:text = "'Normal List: ' + ${listA}"></p>
+    <h2>Linked List Times: </h2>
+    <p th:text = "'Time for Sort: ' + ${timeA} + ' nanoseconds'"></p>
+    <p th:text = "'Time for Addition: ' + ${timeB} + ' nanoseconds'"></p>
+    <p th:text = "'Time for Removing: ' + ${timeC} + ' nanoseconds'"></p>
+
+    <h2>Array List Times: </h2>
+    <p th:text = "'Time for Sort: ' + ${timeD} + ' nanoseconds'"></p>
+    <p th:text = "'Time for Addition: ' + ${timeE} + ' nanoseconds'"></p>
+    <p th:text = "'Time for Removing: ' + ${timeF} + ' nanoseconds'"></p>
+
+</form>
+
+</body>
+</html>

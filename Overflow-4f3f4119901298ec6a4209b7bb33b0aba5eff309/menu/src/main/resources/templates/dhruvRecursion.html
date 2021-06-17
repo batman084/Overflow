@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dhruv's Recursion MiniLab</title>
+  <link rel="stylesheet" href="/overarching.css">
+  <ul>
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="/MyConnectLogin">MyConnect</a></li>
+    <li><a href="/ToDoActivity">ToDo</a></li>
+    <li><a href="/Minilabs">MiniLabs</a></li>
+    <li><a href="/Deployment">Deployment</a></li>
+    <li><a href="/API">API</a></li>
+  </ul>
+</head>
+<body>
+
+<form id="dhruvRecursion" action="/dhruvRecursion" method="GET">
+  <h1>Enter numbers to get the GCF:</h1>
+
+  <input name="num1" id="num1" required type="text"><br>
+
+  <label for="num1">First Number:</label><br>
+  <input name="num2" id="num2" required type="text"><br>
+  <label for="num2">Second Number:</label><br>
+
+  <button>Run:</button>
+
+  <br>
+
+  <p th:text = "'GCF is: ' + ${gcf}"></p>
+
+
+</form>
+
+</body>
+</html>

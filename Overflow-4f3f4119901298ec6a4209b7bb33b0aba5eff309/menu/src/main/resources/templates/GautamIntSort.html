@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gautam's Sorts Lab - Integer Sort</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+
+        div label {
+            display: block;
+        }
+    </style> <!--This is to maintain horizontal input fields-->
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+    <link rel="stylesheet" href="/overarching.css">
+</head>
+<body>
+
+<form id="GautamIntSort" action="/GautamIntSort" method="GET">
+
+
+    <p>Chose a Sort:</p>
+
+    <input type="radio" id="sortIns" name="sortType" value="Sort - Insertion">
+
+    <label for="sortIns">Insertion Sort</label><br>
+
+    <input type="radio" id="sortBub" name="sortType" value="Sort - Bubble">
+
+    <label for="sortBub">Bubble Sort</label><br>
+
+    <input type="radio" id="sortSel" name="sortType" value="Sort - Selection">
+
+    <label for="sortSel">Selection Sort</label>
+
+    <br>
+    <p>List:</p>
+
+    <br>
+    <div>
+        <input name="id0" id="id0" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id0">1st number</label>
+    </div>
+    <div>
+        <input name="id1" id="id1" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id1">2nd number</label>
+    </div>
+    <div>
+        <input name="id2" id="id2" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id2">3rd number</label>
+    </div>
+    <div>
+        <input name="id3" id="id3" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id3">4th number</label>
+    </div>
+    <div>
+        <input name="id4" id="id4" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id4">5th number</label>
+    </div>
+    <div>
+        <input name="id5" id="id5" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id5">6th number</label>
+    </div>
+    <div>
+        <input name="id6" id="id6" required type="number" step="1" min="-10000" max="10000" />
+        <label for="id6">7th number</label>
+    </div>
+    <button>Display Results:</button>
+
+    <br>
+    <br>
+    <br>
+    <p th:text = "'Sorting Method: ' + ${sortA}"></p>
+    <p th:text = "'Sorted List: ' + ${final}"></p>
+    <p th:text = "'Sort Time: ' + ${time} + ' nanoseconds.'"></p>
+</form>
+</body>
+</html>

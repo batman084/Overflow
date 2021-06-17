@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html>
+<head>
+    <title>Hello Spring Boot!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+    <link rel="stylesheet" href="/overarching.css">
+</head>
+<style>
+    #inner {
+        line-height: 50px;
+    }
+</style>
+<body>
+<div id="inner">
+    <h2>First assignment</h2>
+    <p th:text="'Title: ' + ${assignment1}"></p>
+    <a
+            th:href="${assignmentLink1}">Submit Here:</a>
+
+    <h2>Second assignment</h2>
+    <p th:text="'Title: ' + ${assignment2}"></p>
+    <a th:href=" ${assignmentLink2}">Submit Here:</a>
+
+    <h2>Third assignment</h2>
+    <p th:text="'Title: ' + ${assignment3}"></p>
+    <a th:href=" ${assignmentLink3}">Submit Here:</a>
+</div>
+
+
+</body>
+</html>

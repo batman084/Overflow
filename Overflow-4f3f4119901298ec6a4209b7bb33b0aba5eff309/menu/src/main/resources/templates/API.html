@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/overarching.css">
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+<style>
+     th, td, p, input {
+            font:14px Verdana;
+        }
+        table, th, td
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+</style>
+</head>
+<script type="text/javascript">
+     function CreateTableFromJSON() {
+        var jsonResponse = [{"id":1,"unit":"FRQ Tips","content":"1. FRQs must access from Arrays and ArrayLists correctly."},{"id":2,"unit":"FRQ Tips","content":"2. FRQs Must not cause Side Effects or there will be a penalty."},{"id":3,"unit":"FRQ Tips","content":"3. FRQs must access arrays and ArrayLists properly"},{"id":4,"unit":"FRQ Tips","content":"4. All variables used must be declared"},{"id":5,"unit":"FRQ Tips","content":"5. Never write a print statement on the FRQ"},{"id":6,"unit":"FRQ Tips","content":"6. You will not be penalized for using the wrong equal signs"},{"id":7,"unit":"MC Tips","content":"1. Guess on whichever question you do not know"},{"id":8,"unit":"MC Tips","content":"2. Read all answer choices before answering"},{"id":9,"unit":"MC Tips","content":"3. Manually run code by hand to get the correct answer."},{"id":10,"unit":"Inheritance","content":"Inheritance is when one class can take the attributes of another class."},{"id":11,"unit":"Inheritance","content":"Super is a keyword that can access specific aspects of the parent class."},{"id":12,"unit":"Inheritance","content":"@Override is a keyword that overrides a parent method."},{"id":13,"unit":"Inheritance","content":"If the constructor has no parameters: You do not need to do anything.If the Constructor has a parameter:Use super(parameter);."},{"id":14,"unit":"Inheritance","content":"In a method of a child class, super is used to call the same method located in the parent class."},{"id":15,"unit":"Inheritance","content":"Super can be used to call any public instance variables."},{"id":16,"unit":"Inheritance","content":"A compile-time error in polymorphism when the reference type does not have a method the object has."},{"id":17,"unit":"Inheritance","content":"For polymorphism runtime, the method of the subclass is always executed."},{"id":18,"unit":"Inheritance","content":"Super can only be used to access instance variables that are declared as public."},{"id":19,"unit":"Inheritance","content":"The String toString method returns an object in its string form."},{"id":20,"unit":"Inheritance","content":"Static binding decides which method the child class will reference during compile - time."},{"id":21,"unit":"Inheritance","content":"Dynamic binding decides which method the parent class will reference during runtime"},{"id":22,"unit":"2D Arrays","content":"They store data in rows and columns - multiple dimensions. They also have indexes."},{"id":23,"unit":"2D Arrays","content":"You declare a 2D array using datatype[][] name = ."},{"id":24,"unit":"2D Arrays","content":"You access an element by using x[row][column]."},{"id":25,"unit":"2D Arrays","content":"name.length gives us the number of rows in a 2D array."},{"id":26,"unit":"2D Arrays","content":"The first row has index 0, the first column has index 0."},{"id":27,"unit":"2D Arrays","content":"All 2D arrays on the AP CSA test are rectangular."},{"id":28,"unit":"2D Arrays","content":"You find the length of a row of a 2D Array using x[row].length;."},{"id":29,"unit":"2D Array","content":"The Length of a 2D Array is found the same way as in finding a regular array."},{"id":30,"unit":"Recursion","content":"Recursion is when a method continuously calls itself until a certain condition is met."},{"id":31,"unit":"Recursion","content":"The base case of recursion is the comparison that decides that the recursion sequence is finished."},{"id":32,"unit":"Recursion","content":"The method calls itself repeatedly and ignores the previous method calls until the base case is met."},{"id":33,"unit":"Recursion","content":"The method calls are on a stack, and the method calls are then executed in reverse when the base case is met."},{"id":34,"unit":"Recursion","content":"A stack overflow error occurs when you have infinite recursion."},{"id":35,"unit":"Recursion","content":"You do not need to write your own recursion method on the AP Exam."},{"id":36,"unit":"Recursion","content":"Write each call of the method with the parameter. Then replace each method with its result when the base case is met."}]
+
+        var col = [];
+        for (var i = 0; i < jsonResponse.length; i++) {
+            for (var key in jsonResponse[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        var table = document.createElement("table");
+
+
+        var tr = table.insertRow(-1);
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+
+        for (var i = 0; i < jsonResponse.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = jsonResponse[i][col[j]];
+            }
+        }
+
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
+</script>
+
+
+<input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
+<p id="showData"></p>
+<!--
+<div th:replace="fragments/fragments :: nav"></div>
+-->
+
+<!--<h1>Snakeeyes REST API</h1>
+<input type="button" onclick="CreateTableFromJSON()" value="Create Table" />
+<input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
+<p id="showData"></p>-->
+
+
+</html>

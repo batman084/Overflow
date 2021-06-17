@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head>
+        <div layout:fragment="metadata" th:remove="tag">
+    <title>TO DO Myconnect area! What are you waiting for? Get started!</title>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+    <link rel="stylesheet" href="/todo.css">
+</head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <div style="margin: 2%;">
+        <div align="center">
+            <h1>ToDo:</h1>
+            <a href="/ToDoActivity/ToDoCreate/">Create ToDo</a>
+            <a href="/ToDoActivity/ToDoGenerateTest/">Generate Test ToDos</a>
+            <br/><br/>
+
+            <table border="1" cellpadding="10">
+                <thead>
+                <tr>
+                    <th> Title </th>
+                    <th> Description </th>
+                    <th> Date </th>
+                    <th> Time </th>
+                    <th> Actions </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="todo : ${todos}">
+                    <td><span th:text="${todo.title}"> Title </span></td>
+                    <td><span th:text="${todo.description}"> Description </span></td>
+                    <td><span th:text="${todo.date}"> Date </span></td>
+                    <td><span th:text="${todo.time}"> Time </span></td>
+                    <td>
+
+                        <a th:href="@{/TodoActivity/ToDoUpdate/{id}(id = ${todo.id})}">Update</a>
+                        <a th:href="@{/TodoActivity/ToDoDelete/{id}(id = ${todo.id})}">Delete</a>
+                    </td>
+                </tr>
+                <form id="todoUpdatePage" action="/ToDoActivity/ToDoUpdate" method="get">
+                    <label for="titleUpdate">New Title</label><br>
+                    <input name="titleUpdate" id="titleUpdate" required type="text"><br>
+
+                    <label for="descriptionUpdate">New Description:</label><br>
+                    <input name="descriptionUpdate" id="descriptionUpdate" required type="text"><br><br>
+
+                    <label for="yearUpdate">New Year:</label><br>
+                    <input name="yearUpdate" id="yearUpdate" required type="number"><br>
+                    <label for="dateUpdate">New Date:</label><br>
+                    <input name="dateUpdate" id="dateUpdate" required type="number"><br>
+                    <label for="monthUpdate">New Month:</label><br>
+                    <input name="monthUpdate" id="monthUpdate" required type="number"><br><br>
+
+                    <label for="hourUpdate">New Hour:</label><br>
+                    <input name="hourUpdate" id="hourUpdate" required type="number"><br>
+                    <label for="minUpdate">New Minute:</label><br>
+                    <input name="minUpdate" id="minUpdate" required type="number"><br>
+                    <button>Run</button>
+                </form><br><br>
+
+                <br>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div></body>
+
+</html>

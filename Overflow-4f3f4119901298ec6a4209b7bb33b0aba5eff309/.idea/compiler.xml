@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="minilabs" />
+        <module name="todo" />
+        <module name="myconnect" />
+        <module name="api" />
+        <module name="menu" />
+        <module name="OverflowV7" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="14" />
+      <module name="main" target="14" />
+      <module name="main.test" target="14" />
+      <module name="menu" target="14" />
+      <module name="minilabs" target="14" />
+      <module name="myconnect" target="14" />
+      <module name="Overflow" target="1.8" />
+      <module name="spring-boot-thymeleaf" target="1.8" />
+      <module name="todo" target="14" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

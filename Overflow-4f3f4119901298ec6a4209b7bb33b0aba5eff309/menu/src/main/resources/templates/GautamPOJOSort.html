@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Gautam - POJO Sorts</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+
+        div label {
+            display: block;
+        }
+    </style>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+    <link rel="stylesheet" href="/overarching.css">
+</head>
+<body>
+<form id="GautamPOJOSort" action="/GautamPOJOSort" method="GET">
+
+    <h1>POJO Sort Minilab</h1>
+
+    <p>Chose a sort:</p>
+
+    <input type="radio" id="sortIns" name="sortType" value="Sort - Insertion">
+
+    <label for="sortIns">Insertion Sort</label><br>
+
+    <input type="radio" id="sortBub" name="sortType" value="Sort - Bubble">
+
+    <label for="sortBub">Bubble Sort</label><br>
+
+    <input type="radio" id="sortSel" name="sortType" value="Sort - Selection">
+
+    <label for="sortSel">Selection Sort</label>
+
+    <br>
+
+    <p>List:</p>
+
+    <br>
+    <div>
+        <input name="id0" id="id0" required type="text"/>
+        <label for="id0">1st name</label>
+    </div>
+    <div>
+        <input name="id1" id="id1" required type="text"/>
+        <label for="id1">2nd name</label>
+    </div>
+    <div>
+        <input name="id2" id="id2" required type="text"/>
+        <label for="id2">3rd name</label>
+    </div>
+    <div>
+        <input name="id3" id="id3" required type="text"/>
+        <label for="id3">4th name</label>
+    </div>
+    <div>
+        <input name="id4" id="id4" required type="text"/>
+        <label for="id4">5th name</label>
+    </div>
+    <div>
+        <input name="id5" id="id5" required type="text"/>
+        <label for="id5">6th name</label>
+    </div>
+    <div>
+        <input name="id6" id="id6" required type="text"/>
+        <label for="id6">7th name</label>
+    </div>
+    <button>Display Results:</button>
+
+    <br>
+
+    <p th:text = "'Sorting Method: ' + ${sortA}"></p>
+    <p th:text = "'Sorted List: ' + ${finalArray}"></p>
+    <p th:text = "'Sort Time: ' + ${time} + ' nanoseconds.'"></p>
+</form>
+</body>
+</html>

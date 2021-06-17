@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyConnect Login</title>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+    <link rel="stylesheet" href="/overarching.css">
+</head>
+
+<body>
+<h2>Canvas API ID</h2>
+<form id="MyConnectLogin" action="/MyConnectLogin" method="GET">
+    <label for="id4">ID: </label>
+    <input name="id4" id="id4" required type="text"/>
+    <button>Set ID</button>
+</form>
+<br>
+<form action="MyConnect">
+    <button>Go to MyConnect</button>
+</form>
+
+<p th:text="'Your ID is: ' + ${idTest}"></p>
+
+</body>
+</html>

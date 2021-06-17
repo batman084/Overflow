@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhruv's Inheritance MiniLab</title>
+    <link rel="stylesheet" href="/overarching.css">
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+</head>
+<body>
+
+<form id="dhruvSInheritance" action="/dhruvSInheritance" method="GET">
+    <h1>Enter numbers:</h1>
+
+    <input name="inputA" id="inputA" required type="text"><br>
+
+    <label for="inputA">First Number:</label><br>
+    <input name="inputB" id="inputB" required type="text"><br>
+    <label for="inputB">Second Number:</label><br>
+
+    <input name="inputC" id="inputC" required type="text"><br>
+    <label for="inputC">Third Number:</label><br>
+
+
+    <button>Run:</button>
+
+    <br>
+
+    <p th:text = "${output}"></p>
+
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dhruv's Array MiniLab</title>
+  <link rel="stylesheet" href="/overarching.css">
+  <ul>
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="/MyConnectLogin">MyConnect</a></li>
+    <li><a href="/ToDoActivity">ToDo</a></li>
+    <li><a href="/Minilabs">MiniLabs</a></li>
+    <li><a href="/Deployment">Deployment</a></li>
+    <li><a href="/API">API</a></li>
+  </ul>
+</head>
+<body>
+
+<form id="dhruvArray" action="/dhruvArray" method="GET">
+  <h1>Enter numbers to be sorted alternately:</h1>
+
+  <input name="num1" id="num1" required type="text"><br>
+  <label for="num1">First Number:</label><br>
+
+  <input name="num2" id="num2" required type="text"><br>
+  <label for="num2">Second Number:</label><br>
+
+  <input name="num3" id="num3" required type="text"><br>
+  <label for="num3">Third Number:</label><br>
+
+  <input name="num4" id="num4" required type="text"><br>
+  <label for="num4">Fourth Number:</label><br>
+
+  <input name="num5" id="num5" required type="text"><br>
+  <label for="num5">Fifth Number:</label><br>
+
+  <input name="num6" id="num6" required type="text"><br>
+  <label for="num6">Sixth Number:</label><br>
+
+
+
+  <button>Run:</button>
+
+  <br>
+
+  <p th:text = "'Array 1: ' + ${arr1}"></p>
+  <p th:text = "'Array 2: ' + ${arr2}"></p>
+
+
+</form>
+
+</body>
+</html>

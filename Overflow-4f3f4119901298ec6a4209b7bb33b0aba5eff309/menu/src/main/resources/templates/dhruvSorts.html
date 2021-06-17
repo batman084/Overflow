@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhruv's Sorts MiniLab</title>
+    <link rel="stylesheet" href="/overarching.css">
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/MyConnectLogin">MyConnect</a></li>
+        <li><a href="/ToDoActivity">ToDo</a></li>
+        <li><a href="/Minilabs">MiniLabs</a></li>
+        <li><a href="/Deployment">Deployment</a></li>
+        <li><a href="/API">API</a></li>
+    </ul>
+</head>
+<style>
+       *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: indianred;
+    }
+    .banner{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+
+    }
+    .navbar{
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Logo{
+        width: 140px;
+        cursor: pointer;
+    }
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 40px;
+        position: relative;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #009689;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+    }
+    .content h1{
+        font-size: 70px;
+        margin-top: 80px;
+    }
+    .content p{
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+    }
+    button{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 3px solid #005596;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    span{
+        background: #009687;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    button:hover span{
+        width: 100%;
+    }
+    button:hover{
+        border: none;
+    }
+</style>
+<body>
+
+<form id="dhruvSorts" action="/dhruvSorts" method="GET">
+    <h1>Enter numbers to be sorted:</h1>
+
+    <input name="num1" id="num1" required type="text"><br>
+    <label for="num1">First Number:</label><br>
+
+    <input name="num2" id="num2" required type="text"><br>
+    <label for="num2">Second Number:</label><br>
+
+    <input name="num3" id="num3" required type="text"><br>
+    <label for="num3">Third Number:</label><br>
+
+    <input name="num4" id="num4" required type="text"><br>
+    <label for="num4">Fourth Number:</label><br>
+
+    <input name="num5" id="num5" required type="text"><br>
+    <label for="num5">Fifth Number:</label><br>
+
+    <input name="num6" id="num6" required type="text"><br>
+    <label for="num6">Sixth Number:</label><br>
+
+
+
+    <button>Run:</button>
+
+    <br>
+
+    <p th:text = "'Bubble Sort Output: ' + ${bubblesort}"></p>
+    <p th:text = "'Insertion Sort Output: ' + ${insertionsort}"></p>
+    <p th:text = "'Selection Sort Output: ' + ${selectionsort}"></p>
+
+
+
+</form>
+
+</body>
+</html>
