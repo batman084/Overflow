@@ -13,8 +13,8 @@ Commit work for Jacob:
 - [Commit Link](https://github.com/batman084/Overflow/commit/279bbe474a480079ff42057735bb4c5268d0a1ba)
 
 Commit work for Arnav S: 
-- [Commit work](https://github.com/batman084/Overflow/commit/2b794e35d02219422522d1b0f5dd26a2a803b2e2)
-- [Commit work](https://github.com/batman084/Overflow/commit/4c04a655a462f3f487e7326a936d20606818e705)
+- [Commit Link](https://github.com/batman084/Overflow/commit/2b794e35d02219422522d1b0f5dd26a2a803b2e2)
+- [Commit Link](https://github.com/batman084/Overflow/commit/4c04a655a462f3f487e7326a936d20606818e705)
 - [Commit Link](https://github.com/batman084/Overflow/commit/1c7832564eb85b5641c9b0db333d5060d6e44b2c)
 
 <h2>Weekly Updates - Week 3</h>
