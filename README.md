@@ -3,15 +3,16 @@
 
 <h2>Weekly Updates - Week 3</h>
 <h3>com.minilabs.Arnav and Jacob</h3>
-This week com.minilabs.Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
-Commit work for Jacob: [Commit work](https://github.com/batman084/Overflow/blob/main/Reminder)
-[Commit work](https://github.com/batman084/Overflow/tree/main-todo-jr/todo)
-[Commit Work](https://github.com/batman084/Overflow/blob/main-todo-jr/todo/src/main/java/com/overflow/todo/database/DbConnection.java)
+This week Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
+Commit work for Jacob: 
+[Commit Link](https://github.com/batman084/Overflow/commit/1ac2a9cec88142c11ffa87af6de1f867d448696a)
+[Commit Link](https://github.com/batman084/Overflow/commit/12cda07e081ba57e7f0fb058b8915b26dd295cb5)
+[Commit Link](https://github.com/batman084/Overflow/commit/ff81c5984b35bee5dc947f58f68837790ead665a)
 
-Commit work for com.minilabs.Arnav S: [Commit work](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/ToDOmyconnect.html)
-[Commit work](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/Reminder.html)
-[Commit Link](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/index.html)
-
+Commit work for Arnav S: 
+[Commit work](https://github.com/batman084/Overflow/commit/2b794e35d02219422522d1b0f5dd26a2a803b2e2)
+[Commit work](https://github.com/batman084/Overflow/commit/4c04a655a462f3f487e7326a936d20606818e705)
+[Commit Link](https://github.com/batman084/Overflow/commit/1c7832564eb85b5641c9b0db333d5060d6e44b2c)
 
 <h2>Weekly Updates - Week 3</h>
 <h3>Gautam and Dhruv</h3>
@@ -31,7 +32,11 @@ Here is what we plan to do this week:
 <h3>Jacob & com.minilabs.Arnav</h3>
 This week, com.minilabs.Arnav and I (Jacob) worked on the ToDo feature of the project.  
 <br><br>
-Here are the links to our commits: Jacob's and com.minilabs.Arnav's Code [Artifact 1](https://github.com/batman084/Overflow/blob/main/Reminder) & [Artifact 2] (https://github.com/batman084/Overflow/blob/main/ToDo)
+Here are the links to our commits: Jacob's and Arnav's Code 
+[Commit Link](https://github.com/batman084/Overflow/commit/6d2fbc915cf9d1d18283a9b5083c1fec54f01236) 
+[Commit Link](https://github.com/batman084/Overflow/commit/0c8a83a178b05f6bc33f4e1a866d1daacd2a2926)
+[Commit Link](https://github.com/batman084/Overflow/commit/9f6a37f1ec9547306e8667d98f0a1804a8c78f81)
+[Commit Link](https://github.com/batman084/Overflow/commit/c4b94be07c9bb9a2497f0dfce3f81810b645f08b)
 
 Self Grade:  
 Jacob - 5/5  
