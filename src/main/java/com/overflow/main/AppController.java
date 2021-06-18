@@ -105,19 +105,22 @@ public class AppController {
     }
 
     @GetMapping("/dhruvSInheritance")
-    public String dhruvSInheritance(
-            @RequestParam(name = "inputA", required = true, defaultValue = "8") Integer inputA,
-            @RequestParam(name = "inputB", required = true, defaultValue = "3") Integer inputB,
-            @RequestParam(name = "inputC", required = true, defaultValue = "5") Integer inputC,
-            Model model
-    ){
-        Cookie.mnmCookie a = new Cookie.mnmCookie(inputA, inputB, inputC);
+    public String mnmCookie(@RequestParam(name = "chocChipNum", required = true, defaultValue = "10") int chocChipNum,
+                            @RequestParam(name = "cookieDiameter", required = true, defaultValue = "6") int cookieDiameter, Model model){
 
-        model.addAttribute("output", a.toString());
+        model.addAttribute("chocChipNum", chocChipNum);
+        model.addAttribute("cookieDiameter", cookieDiameter);
+
+        int ChocChipNum = chocChipNum;
+        int CookieDiameter = cookieDiameter;
+
+        Cookie.mnmCookie cookie = new Cookie.mnmCookie(ChocChipNum, CookieDiameter, 10);
 
 
-        return "dhruvSInheritance";
 
+        model.addAttribute("newMnMCount", cookie.toString());
+
+        return "DhruvSMiniLab/dhruvSInheritance";
     }
 
 
