@@ -2,16 +2,20 @@
 [Project Board](https://github.com/batman084/Overflow/projects/1)
 
 <h2>Weekly Updates - Week 3</h>
-<h3>com.minilabs.Arnav and Jacob</h3>
-This week com.minilabs.Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
-Commit work for Jacob: [Commit work](https://github.com/batman084/Overflow/blob/main/Reminder)
-[Commit work](https://github.com/batman084/Overflow/tree/main-todo-jr/todo)
-[Commit Work](https://github.com/batman084/Overflow/blob/main-todo-jr/todo/src/main/java/com/overflow/todo/database/DbConnection.java)
+<h3>Arnav and Jacob</h3>
+This week Arnav and Jacob worked on the to do section/remidner of myconnect as well as SQL for the database
+                      
+*Note: The first commit was done on a branch by Jacob and merged to main by Gautum*
 
-Commit work for com.minilabs.Arnav S: [Commit work](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/ToDOmyconnect.html)
-[Commit work](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/Reminder.html)
-[Commit Link](https://github.com/batman084/Overflow/blob/main/menu/src/main/resources/templates/index.html)
+Commit work for Jacob:
+- [Commit Link](https://github.com/batman084/Overflow/commit/1ac2a9cec88142c11ffa87af6de1f867d448696a)
+- [Commit Link](https://github.com/batman084/Overflow/commit/12cda07e081ba57e7f0fb058b8915b26dd295cb5)
+- [Commit Link](https://github.com/batman084/Overflow/commit/279bbe474a480079ff42057735bb4c5268d0a1ba)
 
+Commit work for Arnav S: 
+- [Commit Link](https://github.com/batman084/Overflow/commit/2b794e35d02219422522d1b0f5dd26a2a803b2e2)
+- [Commit Link](https://github.com/batman084/Overflow/commit/4c04a655a462f3f487e7326a936d20606818e705)
+- [Commit Link](https://github.com/batman084/Overflow/commit/1c7832564eb85b5641c9b0db333d5060d6e44b2c)
 
 <h2>Weekly Updates - Week 3</h>
 <h3>Gautam and Dhruv</h3>
@@ -28,14 +32,19 @@ Here is what we plan to do this week:
 *Note: The commit is just Gautam's because Dhruv and Gautam work on it together on a Discord call*
 
 <h2>Weekly Updates - Week 2</h2>
-<h3>Jacob & com.minilabs.Arnav</h3>
-This week, com.minilabs.Arnav and I (Jacob) worked on the ToDo feature of the project.  
+<h3>Jacob & Arnav</h3>
+This week, Arnav and I (Jacob) worked on the ToDo feature of the project.  
 <br><br>
-Here are the links to our commits: Jacob's and com.minilabs.Arnav's Code [Artifact 1](https://github.com/batman084/Overflow/blob/main/Reminder) & [Artifact 2] (https://github.com/batman084/Overflow/blob/main/ToDo)
+Here are the links to our commits: Jacob's and Arnav's Code
+
+- [Commit Link](https://github.com/batman084/Overflow/commit/6d2fbc915cf9d1d18283a9b5083c1fec54f01236)
+- [Commit Link](https://github.com/batman084/Overflow/commit/0c8a83a178b05f6bc33f4e1a866d1daacd2a2926)
+- [Commit Link](https://github.com/batman084/Overflow/commit/9f6a37f1ec9547306e8667d98f0a1804a8c78f81)
+- [Commit Link](https://github.com/batman084/Overflow/commit/c4b94be07c9bb9a2497f0dfce3f81810b645f08b)
 
 Self Grade:  
 Jacob - 5/5  
-com.minilabs.Arnav - 5/5  
+Arnav - 5/5  
 
 <h2>Weekly Updates </h2>
 <h3>Gautam & Dhruv</h3>
@@ -128,7 +137,7 @@ All of our minilabs are accessible via this repo: <a href="https://github.com/ba
     <th>Assignment</th>
   </tr>
   <tr>
-    <td>com.minilabs.Arnav</td>
+    <td>Arnav</td>
     <td>ToDo Feature - Link app to HTML/CSS</td>
   </tr>
   <tr>
@@ -150,5 +159,3 @@ All of our minilabs are accessible via this repo: <a href="https://github.com/ba
 
 <h2>Goals</h2>
 <p>Create a seamless design that brings in MyConnect and also a ToDo feature that work together in harmony to create a application that will aide all students</p>
-
-
