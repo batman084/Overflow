@@ -120,7 +120,7 @@ public class AppController {
 
         model.addAttribute("newMnMCount", cookie.toString());
 
-        return "DhruvSMiniLab/dhruvSInheritance";
+        return "dhruvSInheritance";
     }
 
 
