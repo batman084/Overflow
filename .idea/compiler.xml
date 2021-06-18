@@ -6,20 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="minilabs" />
-        <module name="todo" />
-        <module name="myconnect" />
-        <module name="api" />
-        <module name="OverflowV7" />
+        <module name="spring-boot-thymeleaf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api" target="1.8" />
-      <module name="menu" target="1.8" />
-      <module name="minilabs" target="1.8" />
-      <module name="myconnect" target="1.8" />
       <module name="spring-boot-thymeleaf" target="1.8" />
-      <module name="todo" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-thymeleaf" options="-parameters" />
+    </option>
   </component>
 </project>
