@@ -18,9 +18,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Controller
 public class JacobMiniLabController implements WebMvcConfigurer {
 
-    @GetMapping("/JacobMinilabInheritence")
+    @GetMapping("/JacobMiniLabInheritence")
     public String jacobInheritence() {
-        return "JacobMinilabInheritence";
+        return "JacobMiniLabInheritence";
     }
 
     @GetMapping("/JacobMiniLabRecursion")
@@ -28,17 +28,17 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return "JacobMiniLabRecursion";
     }
 
-    @GetMapping("/JacobMinilabSort")
+    @GetMapping("/JacobMiniLabSort")
     public String jacobSort() {
-        return "JacobMinilabSort";
+        return "JacobMiniLabSort";
     }
 
-    @GetMapping("/JacobMinilabList")
+    @GetMapping("/JacobMiniLabList")
     public String jacobList() {
-        return "JacobMinilabList";
+        return "JacobMiniLabList";
     }
 
-    @GetMapping(value = "/JacobMinilabInheritence/test/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabInheritence/test/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testInheritence() {
         StringBuilder sb = new StringBuilder();
@@ -62,7 +62,7 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabRecursion/test/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabRecursion/test/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testRecursion() {
         StringBuilder sb = new StringBuilder();
@@ -71,11 +71,11 @@ public class JacobMiniLabController implements WebMvcConfigurer {
 
         int result = Main.recursiveFactorial(15);
         sb.append("Result = " + result + "\n");
-        
+
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabList/add-head/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabList/add-head/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testListAddHead() {
 
@@ -101,7 +101,7 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabList/add-tail/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabList/add-tail/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testListAddTail() {
         StringBuilder sb = new StringBuilder();
@@ -125,7 +125,7 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabList/add-at/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabList/add-at/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testListAddAt() {
         StringBuilder sb = new StringBuilder();
@@ -149,7 +149,7 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabList/remove/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabList/remove/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testListRemove() {
         StringBuilder sb = new StringBuilder();
@@ -172,7 +172,7 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabList/sort/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabList/sort/", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String testListSort() {
         StringBuilder sb = new StringBuilder();
@@ -192,37 +192,37 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabSort/selection/integer/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/selection/integer/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortSelectionIntegerAscending() {
         return sortSelectionInteger(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/selection/integer/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/selection/integer/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortSelectionIntegerDescending() {
         return sortSelectionInteger(false);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/selection/string/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/selection/string/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortSelectionStringAscending() {
         return sortSelectionString(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/selection/string/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/selection/string/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortSelectionStringDescending() {
         return sortSelectionString(false);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/selection/pojo/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/selection/pojo/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortSelectionPojoAscending() {
         return sortSelectionPojo(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/selection/pojo/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/selection/pojo/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortSelectionPojoDescending() {
         return sortSelectionPojo(false);
@@ -271,37 +271,37 @@ public class JacobMiniLabController implements WebMvcConfigurer {
     }
 
 
-    @GetMapping(value = "/JacobMinilabSort/insertion/integer/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/insertion/integer/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortInsertionIntegerAscending() {
         return sortInsertionInteger(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/insertion/integer/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/insertion/integer/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortInsertionIntegerDescending() {
         return sortInsertionInteger(false);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/insertion/string/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/insertion/string/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortInsertionStringAscending() {
         return sortInsertionString(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/insertion/string/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/insertion/string/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortInsertionStringDescending() {
         return sortInsertionString(false);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/insertion/pojo/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/insertion/pojo/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortInsertionPojoAscending() {
         return sortInsertionPojo(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/insertion/pojo/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/insertion/pojo/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortInsertionPojoDescending() {
         return sortInsertionPojo(false);
@@ -349,37 +349,37 @@ public class JacobMiniLabController implements WebMvcConfigurer {
         return sb.toString();
     }
 
-    @GetMapping(value = "/JacobMinilabSort/bubble/integer/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/bubble/integer/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortBubbleIntegerAscending() {
         return sortBubbleInteger(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/bubble/integer/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/bubble/integer/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortBubbleIntegerDescending() {
         return sortBubbleInteger(false);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/bubble/string/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/bubble/string/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortBubbleStringAscending() {
         return sortBubbleString(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/bubble/string/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/bubble/string/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortBubbleStringDescending() {
         return sortBubbleString(false);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/bubble/pojo/asc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/bubble/pojo/asc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortBubblePojoAscending() {
         return sortBubblePojo(true);
     }
 
-    @GetMapping(value = "/JacobMinilabSort/bubble/pojo/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/JacobMiniLabSort/bubble/pojo/dsc", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody()
     public String sortBubblePojoDescending() {
         return sortBubblePojo(false);
